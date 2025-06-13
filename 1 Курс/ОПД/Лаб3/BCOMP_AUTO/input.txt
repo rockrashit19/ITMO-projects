@@ -1,0 +1,32 @@
+A=0563
+B=A000
+C=E000
+D=E000
+54C:
+  A
+  B
+  C
+  D
++AF80
+  0740
+  0680
+  EEFB
+  AF04
+  EEF8
+  4EF5
+  EEF5
+  ABF4
+  0480
+  F401
+  CE04
+  0400
+  7EF1
+  F901
+  EEEF
+  854E
+  CEF6
+  0100
+  5ABD
+  8F00
+  7F03
+  6FF3

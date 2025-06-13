@@ -1,0 +1,9 @@
+beans/UserBean.class
+rest/PointResource.class
+rest/PointResource$PointRequest.class
+rest/UserResource.class
+entities/User.class
+rest/UserResource$UserCredentials.class
+util/PasswordUtil.class
+beans/PointCheckBean.class
+entities/Point.class

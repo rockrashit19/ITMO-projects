@@ -1,0 +1,310 @@
+
+R version 4.5.0 (2025-04-11) -- "How About a Twenty-Six"
+Copyright (C) 2025 The R Foundation for Statistical Computing
+Platform: aarch64-apple-darwin20
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[R.app GUI 1.81 (8526) aarch64-apple-darwin20]
+
+[Workspace restored from /Users/admin/.RData]
+[History restored from /Users/admin/.Rapp.history]
+
+> install.packages(c ("lsa", "igraph"))
+--- Please select a CRAN mirror for use in this session ---
+also installing the dependencies ‘glue’, ‘SnowballC’, ‘lifecycle’, ‘magrittr’, ‘pkgconfig’, ‘vctrs’, ‘cpp11’
+
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/glue_1.8.0.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/SnowballC_0.7.1.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/lifecycle_1.0.4.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/magrittr_2.0.3.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/pkgconfig_2.0.3.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/vctrs_0.6.5.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/cpp11_0.5.2.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/lsa_0.73.3.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/igraph_2.1.4.tgz'
+
+The downloaded binary packages are in
+	/var/folders/km/ptgdnx090xvf6fymkyj968t40000gn/T//RtmpyzG3tb/downloaded_packages
+> library(lsa)
+Loading required package: SnowballC
+> library(igraph)
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+> e <- matrix (c (1, 1, 1, 1, 1, 1,))
+Error in c(1, 1, 1, 1, 1, 1, ) : argument 7 is empty
+> e <- matrix (c (1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1), 7, 5)
+Warning message:
+In matrix(c(1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0,  :
+  data length [34] is not a sub-multiple or multiple of the number of rows [7]
+> 
+>  e <- matrix (c (1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1), 7, 5)
+> image (t (e), axes = FALSE, col = grey (seq (1, 0, length = 256)))
+> image (t (e), axes = TRUE, col = grey (seq (1, 0, length = 256)))
+> image (t (e), axes = FALSE, col = grey (seq (1, 0, length = 256)))
+> r <- svd(e)
+> s <- diag(r$d)
+> s
+         [,1]     [,2]      [,3]         [,4]         [,5]
+[1,] 3.812655 0.000000 0.0000000 0.000000e+00 0.000000e+00
+[2,] 0.000000 1.700868 0.0000000 0.000000e+00 0.000000e+00
+[3,] 0.000000 0.000000 0.7554529 0.000000e+00 0.000000e+00
+[4,] 0.000000 0.000000 0.0000000 9.045421e-17 0.000000e+00
+[5,] 0.000000 0.000000 0.0000000 0.000000e+00 4.018789e-18
+> u <- r$u
+> u
+           [,1]        [,2]       [,3]          [,4]          [,5]
+[1,] -0.5736358  0.22650599  0.3458858  7.066277e-01 -2.602579e-02
+[2,] -0.1558400 -0.47236163  0.0508761  3.187495e-02  8.654386e-01
+[3,] -0.1558400 -0.47236163  0.0508761 -1.062498e-02 -2.884795e-01
+[4,] -0.4947114  0.06991446 -0.8662405 -7.166339e-17  3.069209e-16
+[5,] -0.1558400 -0.47236163  0.0508761 -1.062498e-02 -2.884795e-01
+[6,] -0.1558400 -0.47236163  0.0508761 -1.062498e-02 -2.884795e-01
+[7,] -0.5736358  0.22650599  0.3458858 -7.066277e-01  2.602579e-02
+> v <- r$v
+> v
+           [,1]       [,2]       [,3]          [,4]          [,5]
+[1,] -0.5941642 -0.8034250  0.0384345  0.000000e+00  0.000000e+00
+[2,] -0.4306666  0.3074467 -0.2309461 -8.119795e-01 -8.576702e-02
+[3,] -0.4306666  0.3074467 -0.2309461  3.317133e-01  7.460784e-01
+[4,] -0.4306666  0.3074467 -0.2309461  4.802662e-01 -6.603114e-01
+[5,] -0.3009115  0.2663416  0.9157043 -2.463591e-15 -4.256873e-16
+> reduce <- function (u, s, v, k)
++ {}
+> reduce <- function (u, s, v, k) 
++ {}
+> reduce <- function (u, s, v, k) {}
+> reduce
+function (u, s, v, k) {}
+> reduce <- function (u, s, v, k)
++ {
++ us <- as.matrix (u [, 1: k])
++ vs <- as.matrix (v [, 1; k])
+Error: unexpected ';' in:
+"us <- as.matrix (u [, 1: k])
+vs <- as.matrix (v [, 1;"
+> ss <- as.matrix (s [1: k, 1:k])
+Error: object 'k' not found
+> return (us %*% ss%*% t (vs))
+Error: object 'us' not found
+> }
+Error: unexpected '}' in "}"
+> reduce <- function (u, s, v, k) {us <- as.matrix (u [, 1: k]) vs <- as.matrix (v [, 1; k]) ss <- as.matrix (s [1: k, 1:k]) return (us %*% ss%*% t (vs))}
+Error: unexpected symbol in "reduce <- function (u, s, v, k) {us <- as.matrix (u [, 1: k]) vs"
+> reduce <- function (u, s, v, k) {us <- as.matrix (u [, 1: k]) vs <- as.matrix (v [, 1; k]) ss <- as.matrix (s [1: k, 1:k]) return (us %*% ss%*% t (vs))}
+Error: unexpected symbol in "reduce <- function (u, s, v, k) {us <- as.matrix (u [, 1: k]) vs"
+> 
+> reduce <- function (u, s, v, k) {us <- as.matrix (u [, 1: k]) vs <- as.matrix (v [, 1; k]) ss <- as.matrix (s [1: k, 1:k]) return (us %*% ss%*% t (vs))}
+Error: unexpected symbol in "reduce <- function (u, s, v, k) {us <- as.matrix (u [, 1: k]) vs"
+> reduce <- function (u, s, v, k){
++ return k
+Error: unexpected symbol in:
+"reduce <- function (u, s, v, k){
+return k"
+> }
+Error: unexpected '}' in "}"
+> reduce <- function (u, s, v, k)
++ {
++ return (k)
++ }
+> reduce
+function (u, s, v, k)
+{
+return (k)
+}
+> reduce <- function (u, s, v, k)
++ {
++ us <- as.matrix (u [, 1: k])
++ vs <- as.matrix (v [, 1; k])
+Error: unexpected ';' in:
+"us <- as.matrix (u [, 1: k])
+vs <- as.matrix (v [, 1;"
+> ss <- as.matrix (s [1: k, 1:k])
+Error: object 'k' not found
+> return (us %*% ss%*% t (vs))
+Error: object 'us' not found
+> }
+Error: unexpected '}' in "}"
+> reduce <- function (u, s, v, k)
++ + {
++ + us <- as.matrix (u [, 1: k])
++ vs <- as.matrix (v [, 1; k])
+Error: unexpected ';' in:
+"+ us <- as.matrix (u [, 1: k])
+vs <- as.matrix (v [, 1;"
+> reduce <- function (u, s, v, k)
++ + {
++ + us <- as.matrix (u [, 1: k])
++ + vs <- as.matrix (v [, 1; k])
+Error: unexpected ';' in:
+"+ us <- as.matrix (u [, 1: k])
++ vs <- as.matrix (v [, 1;"
+> reduce <- function (u, s, v, k)
++ + {
++ + us <- as.matrix (u [, 1: k]);
++ vs <- as.matrix (v [, 1; k]);
+Error: unexpected ';' in:
+"+ us <- as.matrix (u [, 1: k]);
+vs <- as.matrix (v [, 1;"
+> reduce <- function (u, s, v, k)
++ + {
++ + us <- as.matrix (u [, 1: k]);
++ 
++ 
++ vs <- as.matrix (v [, 1: k])
++ 
++ return (k)
++ }
+> 
+> 
+> }
+Error: unexpected '}' in "}"
+> }
+Error: unexpected '}' in "}"
+> reduce
+function (u, s, v, k)
++ {
++ us <- as.matrix (u [, 1: k]);
+
+
+vs <- as.matrix (v [, 1: k])
+
+return (k)
+}
+> reduce <-function (u, s, v, k)
++ us ‹- as.matrix (u [, 1: k])
+Error: unexpected input in:
+"reduce <-function (u, s, v, k)
+us ‹"
+> vs <- as.matrix
+> (v [, 1: k])
+Error: object 'k' not found
+> ss <- as.matrix (s [1: k, 1: k])
+Error: object 'k' not found
+> return (us %*%
++ 55%*% t (vs))
+Error: object 'us' not found
+> reduce <-function (u, s, v, k)
++ Х
+> reduce
+function (u, s, v, k)
+Х
+> reduce <-function (u, s, v, k){
++ + }
+Error: unexpected '}' in:
+"reduce <-function (u, s, v, k){
++ }"
+> reduce <-function (u, s, v, k){
++ + us ‹- as.matrix (u [, 1: k])
+Error: unexpected input in:
+"reduce <-function (u, s, v, k){
++ us ‹"
+> + vs <- as.matrix (v [, 1: k])
+Error: object 'k' not found
+> + ss <- as.matrix (s [1: k, 1: k])
+Error: object 'k' not found
+> + return (us %*% ss%*% t (vs))
+Error: object 'us' not found
+> }
+Error: unexpected '}' in "}"
+> reduce <-function (u, s, v, k){
++ us ‹- as.matrix (u [, 1: k])
+Error: unexpected input in:
+"reduce <-function (u, s, v, k){
+us ‹"
+> vs <- as.matrix (v [, 1: k])
+Error: object 'k' not found
+> ss <- as.matrix (s [1: k, 1: k])
+Error: object 'k' not found
+> return (us %*% ss%*% t (vs))
+Error: object 'us' not found
+> }
+Error: unexpected '}' in "}"
+> reduce <-function (u, s, v, k)
++ {
++ us ‹- as.matrix (u [, 1: k])
+Error: unexpected input in:
+"{
+us ‹"
+> vs <- as.matrix (v [, 1: k])
+Error: object 'k' not found
+> }
+Error: unexpected '}' in "}"
+> vs <- as.matrix (v [, 1: k])
+Error: object 'k' not found
+> reduce <-function (u, s, v, k)
++ {}
+> reduce <-function (u, s, v, k)
++ {
++ us ‹- as.matrix (u [, 1: k])
+Error: unexpected input in:
+"{
+us ‹"
+> reduce <- function(u, s, v, k) {
++ us <- as.matrix (u [, 1: k])
++ vs <- as.matrix (v [, 1: k])
++ ss <- as.matrix (s [1: k, 1: k])
++ return (us %*% ss%*% t (vs))
++ }
+> reduce
+function(u, s, v, k) {
+us <- as.matrix (u [, 1: k])
+vs <- as.matrix (v [, 1: k])
+ss <- as.matrix (s [1: k, 1: k])
+return (us %*% ss%*% t (vs))
+}
+> e3 <- reduce (u, s, v, 3)
+> e3
+     [,1]          [,2]          [,3]          [,4]          [,5]
+[1,]    1  1.000000e+00  1.000000e+00  1.000000e+00  1.000000e+00
+[2,]    1  4.856499e-17  1.766074e-17  1.979428e-17  2.179140e-17
+[3,]    1 -1.227760e-16 -9.816910e-17 -9.603555e-17 -4.241340e-17
+[4,]    1  1.000000e+00  1.000000e+00  1.000000e+00 -7.438335e-17
+[5,]    1 -1.163659e-16 -9.175905e-17 -8.962551e-17 -6.782930e-17
+[6,]    1 -1.163659e-16 -9.175905e-17 -8.962551e-17 -6.782930e-17
+[7,]    1  1.000000e+00  1.000000e+00  1.000000e+00  1.000000e+00
+> image (t (e3), axes = FALSE, col = grey (seq (1, 0, length = 256)))
+> e2 <- reduce (u, s, v, 2)
+> e2
+          [,1]        [,2]        [,3]        [,4]        [,5]
+[1,] 0.9899570 1.060346323 1.060346323 1.060346323  0.76072607
+[2,] 0.9985228 0.008876299 0.008876299 0.008876299 -0.03519464
+[3,] 0.9985228 0.008876299 0.008876299 0.008876299 -0.03519464
+[4,] 1.0251517 0.848867943 0.848867943 0.848867943  0.59924050
+[5,] 0.9985228 0.008876299 0.008876299 0.008876299 -0.03519464
+[6,] 0.9985228 0.008876299 0.008876299 0.008876299 -0.03519464
+[7,] 0.9899570 1.060346323 1.060346323 1.060346323  0.76072607
+> image (t (e2), axes = FALSE, col = grey (seq (1, 0, length = 256)))
+> e1 <- reduce (u, s, v, 1)
+> e1
+          [,1]      [,2]      [,3]      [,4]      [,5]
+[1,] 1.2994820 0.9419004 0.9419004 0.9419004 0.6581161
+[2,] 0.3530311 0.2558867 0.2558867 0.2558867 0.1787908
+[3,] 0.3530311 0.2558867 0.2558867 0.2558867 0.1787908
+[4,] 1.1206912 0.8123078 0.8123078 0.8123078 0.5675684
+[5,] 0.3530311 0.2558867 0.2558867 0.2558867 0.1787908
+[6,] 0.3530311 0.2558867 0.2558867 0.2558867 0.1787908
+[7,] 1.2994820 0.9419004 0.9419004 0.9419004 0.6581161
+> image (t (e1), axes = FALSE, col = grey (seq (1, 0, length = 256)))
+> 

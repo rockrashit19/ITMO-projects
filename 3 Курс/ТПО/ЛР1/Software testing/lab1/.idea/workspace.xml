@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2e7f603a-de50-47a3-b277-0cfc7eeb1593" name="Default Changelist" comment="New Main, Dolphin, Human classes" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;rockrashit19&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/rockrashit19/SoftwareTest.git",
+    "accountId": "cc8e6a9a-0237-4e6b-9e59-6a8934bdad58"
+  }
+}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2vGV6hjrE7ftCjU5HBtaOgSDRnV" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/admin/IdeaProjects/Software testing/lab1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="task.task3.Main" />
+      <module name="lab1" />
+      <option name="VM_PARAMETERS" value="--add-opens jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED " />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="task.task3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DomainModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab1" />
+      <option name="PACKAGE_NAME" value="test.task3" />
+      <option name="MAIN_CLASS_NAME" value="test.task3.DomainModelTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DomainModelTest.dolphinInitialState" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.task3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.task3" />
+      <option name="MAIN_CLASS_NAME" value="test.task3.DomainModelTest" />
+      <option name="METHOD_NAME" value="dolphinInitialState" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DomainModelTest.humanInitialState" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.task3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.task3" />
+      <option name="MAIN_CLASS_NAME" value="test.task3.DomainModelTest" />
+      <option name="METHOD_NAME" value="humanInitialState" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuickSortTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.task2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.task2" />
+      <option name="MAIN_CLASS_NAME" value="test.task2.QuickSortTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.DomainModelTest" />
+      <item itemvalue="JUnit.DomainModelTest.dolphinInitialState" />
+      <item itemvalue="JUnit.DomainModelTest.humanInitialState" />
+      <item itemvalue="JUnit.QuickSortTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.QuickSortTest" />
+        <item itemvalue="JUnit.DomainModelTest" />
+        <item itemvalue="JUnit.DomainModelTest.humanInitialState" />
+        <item itemvalue="JUnit.DomainModelTest.dolphinInitialState" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.23774.435" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-IU-251.23774.435" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2e7f603a-de50-47a3-b277-0cfc7eeb1593" name="Default Changelist" comment="" />
+      <created>1743771224062</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1743771224062</updated>
+      <workItem from="1743771225207" duration="1326000" />
+      <workItem from="1743772584339" duration="349000" />
+      <workItem from="1743772950770" duration="26000" />
+      <workItem from="1743773025602" duration="1395000" />
+      <workItem from="1743774444219" duration="12461000" />
+      <workItem from="1744980984485" duration="2689000" />
+      <workItem from="1744983733844" duration="1547000" />
+      <workItem from="1744985567777" duration="54000" />
+      <workItem from="1746195538610" duration="304000" />
+      <workItem from="1746196114945" duration="103000" />
+      <workItem from="1746202662317" duration="232000" />
+      <workItem from="1746476400627" duration="11000" />
+    </task>
+    <task id="LOCAL-00001" summary="init commit to old file">
+      <created>1743771669415</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1743771669415</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add user">
+      <created>1743771751338</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1743771751338</updated>
+    </task>
+    <task id="LOCAL-00003" summary="delete user">
+      <created>1743772085427</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1743772085427</updated>
+    </task>
+    <task id="LOCAL-00004" summary="commented">
+      <created>1743772479397</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1743772479397</updated>
+    </task>
+    <task id="LOCAL-00005" summary="new TaylorSeries">
+      <created>1743780752819</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1743780752819</updated>
+    </task>
+    <task id="LOCAL-00006" summary="deleted main">
+      <created>1743780797828</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1743780797828</updated>
+    </task>
+    <task id="LOCAL-00007" summary="new TaylorTest">
+      <created>1743780809393</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1743780809393</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add README">
+      <created>1743781386541</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1743781386541</updated>
+    </task>
+    <task id="LOCAL-00009" summary="rewrite QuickSort">
+      <created>1743782316629</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1743782316629</updated>
+    </task>
+    <task id="LOCAL-00010" summary="rewrite QuickSortTest">
+      <created>1743782933493</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1743782933494</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add ReasonType">
+      <created>1743783459380</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1743783459380</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add Reason">
+      <created>1743783541944</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1743783541944</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add Creature">
+      <created>1743783581627</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1743783581627</updated>
+    </task>
+    <task id="LOCAL-00014" summary="add Belief">
+      <created>1743783652460</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1743783652460</updated>
+    </task>
+    <task id="LOCAL-00015" summary="rewrite DomainModelTest">
+      <created>1743784438550</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1743784438550</updated>
+    </task>
+    <task id="LOCAL-00016" summary="delete Comments">
+      <created>1743786620441</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1743786620441</updated>
+    </task>
+    <task id="LOCAL-00017" summary="rewrite DisplayName">
+      <created>1743787118681</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1743787118681</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add test with +-inf and test even property">
+      <created>1743939824605</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1743939824605</updated>
+    </task>
+    <task id="LOCAL-00019" summary="made directions">
+      <created>1744981666480</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1744981666480</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init commit to old file" />
+    <MESSAGE value="add user" />
+    <MESSAGE value="delete user" />
+    <MESSAGE value="commented" />
+    <MESSAGE value="new TaylorSeries" />
+    <MESSAGE value="deleted main" />
+    <MESSAGE value="new TaylorTest" />
+    <MESSAGE value="add README" />
+    <MESSAGE value="rewrite QuickSort" />
+    <MESSAGE value="rewrite QuickSortTest" />
+    <MESSAGE value="add ReasonType" />
+    <MESSAGE value="add Reason" />
+    <MESSAGE value="add Creature" />
+    <MESSAGE value="add Belief" />
+    <MESSAGE value="rewrite DomainModelTest" />
+    <MESSAGE value="delete Comments" />
+    <MESSAGE value="rewrite DisplayName" />
+    <MESSAGE value="add test with +-inf and test even property" />
+    <MESSAGE value="made directions" />
+    <MESSAGE value="New Main, Dolphin, Human classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="New Main, Dolphin, Human classes" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

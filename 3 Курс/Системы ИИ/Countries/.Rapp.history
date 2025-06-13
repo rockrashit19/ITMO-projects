@@ -1,0 +1,147 @@
+q()
+install.packages(c ("lsa", "igraph"))
+library(lsa)
+library(igraph)
+e <- matrix (c (1, 1, 1, 1, 1, 1,))
+e <- matrix (c (1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1), 7, 5)
+e <- matrix (c (1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1), 7, 5)
+image (t (e), axes = FALSE, col = grey (seq (1, 0, length = 256)))
+image (t (e), axes = TRUE, col = grey (seq (1, 0, length = 256)))
+image (t (e), axes = FALSE, col = grey (seq (1, 0, length = 256)))
+r <- svd(e)
+s <- diag(r$d)
+s
+u <- r$u
+u
+v <- r$v
+v
+reduce <- function (u, s, v, k)
+{}
+reduce <- function (u, s, v, k)
+{}
+reduce <- function (u, s, v, k) {}
+reduce
+reduce <- function (u, s, v, k)#
+{#
+us <- as.matrix (u [, 1: k])#
+vs <- as.matrix (v [, 1; k])#
+ss <- as.matrix (s [1: k, 1:k])#
+return (us %*% ss%*% t (vs))#
+}
+reduce <- function (u, s, v, k) {us <- as.matrix (u [, 1: k]) vs <- as.matrix (v [, 1; k]) ss <- as.matrix (s [1: k, 1:k]) return (us %*% ss%*% t (vs))}
+reduce <- function (u, s, v, k){#
+return k#
+}
+reduce <- function (u, s, v, k)#
+{#
+return (k)#
+}
+reduce
+reduce <- function (u, s, v, k)#
+{#
+us <- as.matrix (u [, 1: k])#
+vs <- as.matrix (v [, 1; k])#
+ss <- as.matrix (s [1: k, 1:k])#
+return (us %*% ss%*% t (vs))#
+}
+reduce <- function (u, s, v, k)#
++ {#
++ us <- as.matrix (u [, 1: k])
+vs <- as.matrix (v [, 1; k])
+reduce <- function (u, s, v, k)#
++ {#
++ us <- as.matrix (u [, 1: k])
++ vs <- as.matrix (v [, 1; k])
+reduce <- function (u, s, v, k)#
++ {#
++ us <- as.matrix (u [, 1: k]);
+vs <- as.matrix (v [, 1; k]);
+reduce <- function (u, s, v, k)#
++ {#
++ us <- as.matrix (u [, 1: k]);
+vs <- as.matrix (v [, 1: k])
+return (k)
+}
+reduce
+reduce <-function (u, s, v, k)#
+us ‹- as.matrix (u [, 1: k])#
+vs <- as.matrix#
+(v [, 1: k])#
+ss <- as.matrix (s [1: k, 1: k])#
+return (us %*%#
+55%*% t (vs))
+reduce <-function (u, s, v, k)#
+Х
+reduce
+reduce <-function (u, s, v, k){#
++ }
+reduce <-function (u, s, v, k){#
++ us ‹- as.matrix (u [, 1: k])#
++ vs <- as.matrix (v [, 1: k])#
++ ss <- as.matrix (s [1: k, 1: k])#
++ return (us %*% ss%*% t (vs))#
+}
+reduce <-function (u, s, v, k){#
+us ‹- as.matrix (u [, 1: k])#
+vs <- as.matrix (v [, 1: k])#
+ss <- as.matrix (s [1: k, 1: k])#
+return (us %*% ss%*% t (vs))#
+}
+reduce <-function (u, s, v, k)#
+{#
+us ‹- as.matrix (u [, 1: k])#
+vs <- as.matrix (v [, 1: k])#
+}
+vs <- as.matrix (v [, 1: k])
+reduce <-function (u, s, v, k)
+{}
+reduce <-function (u, s, v, k)
+{
+us ‹- as.matrix (u [, 1: k])
+reduce <- function(u, s, v, k) {
+us <- as.matrix (u [, 1: k])
+vs <- as.matrix (v [, 1: k])
+ss <- as.matrix (s [1: k, 1: k])
+return (us %*% ss%*% t (vs))
+}
+reduce
+e3 <- reduce (u, s, v, 3)
+e3
+image (t (e3), axes = FALSE, col = grey (seq (1, 0, length = 256)))
+e2 <- reduce (u, s, v, 2)
+e2
+image (t (e2), axes = FALSE, col = grey (seq (1, 0, length = 256)))
+e1 <- reduce (u, s, v, 1)
+e1
+image (t (e1), axes = FALSE, col = grey (seq (1, 0, length = 256)))
+install.packages (c ("tm", "wordcloud"))
+library(tm)
+library(wordcloud)
+setwd("/Users/admin/Documents/Documents - MacBook Pro/Рашит/Университеты/Итмо/ITMO/3 Курс/Системы ИИ/Countries")
+corpus <- Corpus (DirSource ())
+corpus
+removeEndings <- function(x) gsub (" [''] s", "" ,x)
+removeEndings <- function(x) gsub (" [''] s", "" ,x)
+corpus <- tm_map (corpus, content_transformer (removeEndings))
+corpus <- tm_map (corpus, removePunctuation)
+corpus <- tm_map (corpus, stripWhitespace)
+corpus <- tm_map (corpus, removeNumbers)
+corpus <- tm_map (corpus, content_transformer (tolower))
+dtm <- DocumentTermMatrix (corpus)
+tdm <- TermDocumentMatrix (corpus)
+ClassLabels = c (1, 1, 1, 2, 2, 2)
+library(RTextTools)
+library("RTextTools")
+install.packages (c, "RTextTools")
+install.packages (c, "RTextTools")
+install.packages("RTextTools")
+library(RTextTools)
+ClassLabels =c (1,1,1,2,2,2)
+conatiner <- create_container (dtm, ClassLabels, trainSize = 1:5, testSize = 6:6, virgin = FALSE)
+models <- train_models(container, algorithms = c ("SVM"))
+container <- create_container (dtm, ClassLabels, trainSize = 1:5, testSize = 6:6, virgin = FALSE)
+models <- train_models(container, algorithms = c ("SVM"))
+results <- classify_models (container, models)
+analytics <- create_analytics (container, results)
+analytics@algorithm_summary
+analytics@document_summary

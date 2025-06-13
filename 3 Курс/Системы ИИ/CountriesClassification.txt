@@ -1,0 +1,137 @@
+
+R version 4.5.0 (2025-04-11) -- "How About a Twenty-Six"
+Copyright (C) 2025 The R Foundation for Statistical Computing
+Platform: aarch64-apple-darwin20
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[R.app GUI 1.81 (8526) aarch64-apple-darwin20]
+
+[Workspace restored from /Users/admin/.RData]
+[History restored from /Users/admin/.Rapp.history]
+
+> install.packages (c ("tm", "wordcloud"))
+--- Please select a CRAN mirror for use in this session ---
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/tm_0.7-16.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/wordcloud_2.6.tgz'
+
+The downloaded binary packages are in
+	/var/folders/km/ptgdnx090xvf6fymkyj968t40000gn/T//RtmpyHykGf/downloaded_packages
+> library(tm)
+Loading required package: NLP
+> library(wordcloud)
+Loading required package: RColorBrewer
+> setwd("/Users/admin/Documents/Documents - MacBook Pro/Рашит/Университеты/Итмо/ITMO/3 Курс/Системы ИИ/Countries")
+> corpus <- Corpus (DirSource ())
+> corpus
+<<SimpleCorpus>>
+Metadata:  corpus specific: 1, document level (indexed): 0
+Content:  documents: 6
+> removeEndings <- function(x) gsub (" [''] s", "" ,x)
+> removeEndings <- function(x) gsub (" [''] s", "" ,x)
+> corpus <- tm_map (corpus, content_transformer (removeEndings))
+> corpus <- tm_map (corpus, removePunctuation)
+> corpus <- tm_map (corpus, stripWhitespace)
+> corpus <- tm_map (corpus, removeNumbers)
+> corpus <- tm_map (corpus, content_transformer (tolower))
+> dtm <- DocumentTermMatrix (corpus)
+> tdm <- TermDocumentMatrix (corpus)
+> ClassLabels = c (1, 1, 1, 2, 2, 2)
+> library(RTextTools)
+Error in library(RTextTools) : there is no package called ‘RTextTools’
+> library("RTextTools")
+Error in library("RTextTools") : there is no package called ‘RTextTools’
+> install.packages (c, "RTextTools")
+Warning in install.packages(c, "RTextTools") :
+  'lib = "RTextTools"' is not writable
+Would you like to use a personal library instead? (yes/No/cancel) Тщ
+Error in askYesNo(gettext("Would you like to use a personal library instead?"),  : 
+  Unrecognized response “Тщ”
+> install.packages (c, "RTextTools")
+Warning in install.packages(c, "RTextTools") :
+  'lib = "RTextTools"' is not writable
+Would you like to use a personal library instead? (yes/No/cancel) No
+Error in install.packages(c, "RTextTools") : unable to install packages
+> install.packages("RTextTools")
+also installing the dependencies ‘utf8’, ‘listenv’, ‘parallelly’, ‘farver’, ‘labeling’, ‘R6’, ‘viridisLite’, ‘fansi’, ‘pillar’, ‘future’, ‘globals’, ‘digest’, ‘gtable’, ‘isoband’, ‘scales’, ‘tibble’, ‘withr’, ‘future.apply’, ‘numDeriv’, ‘progressr’, ‘SQUAREM’, ‘data.table’, ‘ggplot2’, ‘diagram’, ‘lava’, ‘iterators’, ‘proxy’, ‘prodlim’, ‘bitops’, ‘foreach’, ‘shape’, ‘RcppEigen’, ‘SparseM’, ‘randomForest’, ‘tree’, ‘e1071’, ‘ipred’, ‘caTools’, ‘glmnet’, ‘tau’
+
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/utf8_1.2.5.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/listenv_0.9.1.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/parallelly_1.44.0.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/farver_2.1.2.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/labeling_0.4.3.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/R6_2.6.1.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/viridisLite_0.4.2.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/fansi_1.0.6.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/pillar_1.10.2.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/future_1.49.0.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/globals_0.18.0.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/digest_0.6.37.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/gtable_0.3.6.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/isoband_0.2.7.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/scales_1.4.0.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/tibble_3.2.1.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/withr_3.0.2.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/future.apply_1.11.3.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/numDeriv_2016.8-1.1.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/progressr_0.15.1.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/SQUAREM_2021.1.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/data.table_1.17.4.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/ggplot2_3.5.2.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/diagram_1.6.5.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/lava_1.8.1.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/iterators_1.0.14.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/proxy_0.4-27.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/prodlim_2025.04.28.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/bitops_1.0-9.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/foreach_1.5.2.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/shape_1.4.6.1.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/RcppEigen_0.3.4.0.2.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/SparseM_1.84-2.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/randomForest_4.7-1.2.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/tree_1.0-44.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/e1071_1.7-16.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/ipred_0.9-15.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/caTools_1.18.3.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/glmnet_4.1-9.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/tau_0.0-26.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/big-sur-arm64/contrib/4.5/RTextTools_1.4.3.tgz'
+
+The downloaded binary packages are in
+	/var/folders/km/ptgdnx090xvf6fymkyj968t40000gn/T//RtmpyHykGf/downloaded_packages
+> 
+> library(RTextTools)
+Loading required package: SparseM
+> ClassLabels =c (1,1,1,2,2,2)
+> conatiner <- create_container (dtm, ClassLabels, trainSize = 1:5, testSize = 6:6, virgin = FALSE)
+> models <- train_models(container, algorithms = c ("SVM"))
+Error: object 'container' not found
+> container <- create_container (dtm, ClassLabels, trainSize = 1:5, testSize = 6:6, virgin = FALSE)
+> models <- train_models(container, algorithms = c ("SVM"))
+> results <- classify_models (container, models)
+> analytics <- create_analytics (container, results)
+> analytics@algorithm_summary
+  SVM_PRECISION SVM_RECALL SVM_FSCORE
+2             1          1          1
+> analytics@document_summary
+  SVM_LABEL  SVM_PROB MANUAL_CODE
+1         2 0.6404733           2
+  CONSENSUS_CODE CONSENSUS_AGREE
+1              2               1
+  CONSENSUS_INCORRECT PROBABILITY_CODE
+1                   0                2
+  PROBABILITY_INCORRECT
+1                     0
+> 

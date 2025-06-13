@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0105c848-f10c-40ce-94ee-f6e52fbbaac2" name="Default Changelist" comment="Commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ЛР2/2Lab" beforeDir="false" afterPath="$PROJECT_DIR$/../../ЛР2/2Lab" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;rockrashit19&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/rockrashit19/ITMO.git&quot;,
+    &quot;accountId&quot;: &quot;cc8e6a9a-0237-4e6b-9e59-6a8934bdad58&quot;
+  }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2udBPRs9yOf4cwiO8y0bU495YHh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/admin/Documents/Documents - MacBook Pro/Рашит/Университеты/Итмо/ITMO/3 Курс/ТПО/ЛР1/Software testing&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="test.task1" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.ScenarioTest.humanPerceivesFactsAndFormsPerceptions">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="task.task3.Main" />
+      <module name="Software testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="task.task3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScenarioTest.factCreationAndProperties" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Software testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.task3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.task3" />
+      <option name="MAIN_CLASS_NAME" value="test.task3.ScenarioTest" />
+      <option name="METHOD_NAME" value="factCreationAndProperties" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScenarioTest.humanPerceivesFactsAndFormsPerceptions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Software testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.task3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.task3" />
+      <option name="MAIN_CLASS_NAME" value="test.task3.ScenarioTest" />
+      <option name="METHOD_NAME" value="humanPerceivesFactsAndFormsPerceptions" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScenarioTest.perceptionCreationAndProperties" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Software testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.task3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.task3" />
+      <option name="MAIN_CLASS_NAME" value="test.task3.ScenarioTest" />
+      <option name="METHOD_NAME" value="perceptionCreationAndProperties" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Smth.factCreationAndProperties" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Software testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.task3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.task3" />
+      <option name="MAIN_CLASS_NAME" value="test.task3.Smth" />
+      <option name="METHOD_NAME" value="factCreationAndProperties" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ScenarioTest.humanPerceivesFactsAndFormsPerceptions" />
+        <item itemvalue="JUnit.ScenarioTest.perceptionCreationAndProperties" />
+        <item itemvalue="JUnit.ScenarioTest.factCreationAndProperties" />
+        <item itemvalue="JUnit.Smth.factCreationAndProperties" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.23774.435" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-IU-251.23774.435" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0105c848-f10c-40ce-94ee-f6e52fbbaac2" name="Default Changelist" comment="" />
+      <created>1742568549238</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1742568549238</updated>
+      <workItem from="1742568550376" duration="4210000" />
+      <workItem from="1742736258354" duration="1813000" />
+      <workItem from="1743770874827" duration="348000" />
+      <workItem from="1744986149292" duration="34000" />
+      <workItem from="1744986206962" duration="7454000" />
+      <workItem from="1745229446462" duration="41000" />
+      <workItem from="1746202906487" duration="1627000" />
+      <workItem from="1746204574679" duration="706000" />
+      <workItem from="1746476382762" duration="10000" />
+      <workItem from="1747143820973" duration="653000" />
+      <workItem from="1747399746478" duration="597000" />
+      <workItem from="1747773697177" duration="1001000" />
+    </task>
+    <task id="LOCAL-00001" summary="made Human, Dolphin, Main, DomainModelTest">
+      <created>1744986470168</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1744986470168</updated>
+    </task>
+    <task id="LOCAL-00002" summary="solved some errors">
+      <created>1744986547963</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1744986547963</updated>
+    </task>
+    <task id="LOCAL-00003" summary="rewrote 3task">
+      <created>1744994790011</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1744994790011</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Commit">
+      <option name="closed" value="true" />
+      <created>1746203336633</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1746203336633</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="made Human, Dolphin, Main, DomainModelTest" />
+    <MESSAGE value="solved some errors" />
+    <MESSAGE value="rewrote 3task" />
+    <MESSAGE value="Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
+  </component>
+</project>

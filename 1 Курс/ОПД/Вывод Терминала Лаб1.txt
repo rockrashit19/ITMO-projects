@@ -1,0 +1,526 @@
+Last login: Mon Mar 10 23:49:47 on ttys009
+admin@MacBook-Pro-2 ~ % mkdir ~/lab0
+admin@MacBook-Pro-2 lab0 % echo "Способности Torrent Swift Swim Sniper" > horsea4
+admin@MacBook-Pro-2 lab0 % mkdir kadabra9
+admin@MacBook-Pro-2 lab0 % echo -e "weigth=112.4 height=24.0 atk=8\ndef=10" > klang0
+admin@MacBook-Pro-2 lab0 % mkdir piplup1
+admin@MacBook-Pro-2 lab0 % echo -e "weigth=226.2 height=59.0 atk=14\ndef=8" > salamence4
+admin@MacBook-Pro-2 lab0 % mkdir zweilous9
+admin@MacBook-Pro-2 lab0 % ls -l
+total 24
+-rw-r--r--  1 admin  staff  49 12 мар 18:23 horsea4
+drwxr-xr-x  2 admin  staff  64 12 мар 18:23 kadabra9
+-rw-r--r--  1 admin  staff  38 12 мар 18:25 klang0
+drwxr-xr-x  2 admin  staff  64 12 мар 18:25 piplup1
+-rw-r--r--  1 admin  staff  38 12 мар 18:26 salamence4
+drwxr-xr-x  2 admin  staff  64 12 мар 18:26 zweilous9
+admin@MacBook-Pro-2 lab0 % chmod 062 horsea4
+admin@MacBook-Pro-2 lab0 % ls -l
+total 24
+----rw--w-  1 admin  staff  49 12 мар 18:23 horsea4
+drwxr-xr-x  2 admin  staff  64 12 мар 18:23 kadabra9
+-rw-r--r--  1 admin  staff  38 12 мар 18:25 klang0
+drwxr-xr-x  2 admin  staff  64 12 мар 18:25 piplup1
+-rw-r--r--  1 admin  staff  38 12 мар 18:26 salamence4
+drwxr-xr-x  2 admin  staff  64 12 мар 18:26 zweilous9
+admin@MacBook-Pro-2 lab0 % chmod 62 horsea4 
+admin@MacBook-Pro-2 lab0 % ls -l
+total 24
+----rw--w-  1 admin  staff  49 12 мар 18:23 horsea4
+drwxr-xr-x  2 admin  staff  64 12 мар 18:23 kadabra9
+-rw-r--r--  1 admin  staff  38 12 мар 18:25 klang0
+drwxr-xr-x  2 admin  staff  64 12 мар 18:25 piplup1
+-rw-r--r--  1 admin  staff  38 12 мар 18:26 salamence4
+drwxr-xr-x  2 admin  staff  64 12 мар 18:26 zweilous9
+admin@MacBook-Pro-2 lab0 % cd \kadabra9
+admin@MacBook-Pro-2 kadabra9 % echo -e "weigth=2.2\nheight=8.0 atk=6 def=5" > foongus
+admin@MacBook-Pro-2 kadabra9 % echo -e "Развитые способности Cursed\nBody" > dusclops
+admin@MacBook-Pro-2 kadabra9 % mkdir petilil
+admin@MacBook-Pro-2 kadabra9 % cd ~/lab0
+admin@MacBook-Pro-2 lab0 % ;s -l
+zsh: command not found: s
+admin@MacBook-Pro-2 lab0 % ls -l
+total 24
+----rw--w-  1 admin  staff   49 12 мар 18:23 horsea4
+drwxr-xr-x  5 admin  staff  160 12 мар 18:30 kadabra9
+-rw-r--r--  1 admin  staff   38 12 мар 18:25 klang0
+drwxr-xr-x  2 admin  staff   64 12 мар 18:25 piplup1
+-rw-r--r--  1 admin  staff   38 12 мар 18:26 salamence4
+drwxr-xr-x  2 admin  staff   64 12 мар 18:26 zweilous9
+admin@MacBook-Pro-2 lab0 % cd /kadabra9
+cd: no such file or directory: /kadabra9
+admin@MacBook-Pro-2 lab0 % cd \kadabra9
+admin@MacBook-Pro-2 kadabra9 % ls -l
+total 16
+-rw-r--r--  1 admin  staff  52 12 мар 18:30 dusclops
+-rw-r--r--  1 admin  staff  34 12 мар 18:29 foongus
+drwxr-xr-x  2 admin  staff  64 12 мар 18:30 petilil
+admin@MacBook-Pro-2 kadabra9 % chmod 004 dusclops
+admin@MacBook-Pro-2 kadabra9 % chmod 666 foongus
+admin@MacBook-Pro-2 kadabra9 % chmod 733 petilil
+admin@MacBook-Pro-2 kadabra9 % ls -l
+total 16
+-------r--  1 admin  staff  52 12 мар 18:30 dusclops
+-rw-rw-rw-  1 admin  staff  34 12 мар 18:29 foongus
+drwx-wx-wx  2 admin  staff  64 12 мар 18:30 petilil
+admin@MacBook-Pro-2 kadabra9 % cd ~/lab0
+admin@MacBook-Pro-2 lab0 % ls -l
+total 24
+----rw--w-  1 admin  staff   49 12 мар 18:23 horsea4
+drwxr-xr-x  6 admin  staff  192 12 мар 18:34 kadabra9
+-rw-r--r--  1 admin  staff   38 12 мар 18:25 klang0
+drwxr-xr-x  2 admin  staff   64 12 мар 18:25 piplup1
+-rw-r--r--  1 admin  staff   38 12 мар 18:26 salamence4
+drwxr-xr-x  2 admin  staff   64 12 мар 18:26 zweilous9
+admin@MacBook-Pro-2 lab0 % cs ~/lab0/kadabra9
+zsh: command not found: cs
+admin@MacBook-Pro-2 lab0 % cd ~/lab0/kadabra9
+admin@MacBook-Pro-2 kadabra9 % cd ~/lab0
+admin@MacBook-Pro-2 lab0 % chmod 577 kadabra9
+admin@MacBook-Pro-2 lab0 % ls -l
+total 24
+----rw--w-  1 admin  staff   49 12 мар 18:23 horsea4
+dr-xrwxrwx  6 admin  staff  192 12 мар 18:34 kadabra9
+-rw-r--r--  1 admin  staff   38 12 мар 18:25 klang0
+drwxr-xr-x  2 admin  staff   64 12 мар 18:25 piplup1
+-rw-r--r--  1 admin  staff   38 12 мар 18:26 salamence4
+drwxr-xr-x  2 admin  staff   64 12 мар 18:26 zweilous9
+admin@MacBook-Pro-2 lab0 % cd \kadabra9
+admin@MacBook-Pro-2 kadabra9 % chmod 004 dusclops
+admin@MacBook-Pro-2 kadabra9 % cmod 733 petilil
+zsh: command not found: cmod
+admin@MacBook-Pro-2 kadabra9 % cmod 733 petilil
+zsh: command not found: cmod
+admin@MacBook-Pro-2 kadabra9 % chmod 733 petilil
+admin@MacBook-Pro-2 kadabra9 % ls -l
+total 16
+-------r--  1 admin  staff  52 12 мар 18:30 dusclops
+-rw-rw-rw-  1 admin  staff  34 12 мар 18:29 foongus
+drwx-wx-wx  2 admin  staff  64 12 мар 18:30 petilil
+admin@MacBook-Pro-2 kadabra9 % chmod 737 petilil
+admin@MacBook-Pro-2 kadabra9 % ls -l
+total 16
+-------r--  1 admin  staff  52 12 мар 18:30 dusclops
+-rw-rw-rw-  1 admin  staff  34 12 мар 18:29 foongus
+drwx-wxrwx  2 admin  staff  64 12 мар 18:30 petilil
+admin@MacBook-Pro-2 kadabra9 % chmod 666 foongus
+admin@MacBook-Pro-2 kadabra9 % ls -l
+total 16
+-------r--  1 admin  staff  52 12 мар 18:30 dusclops
+-rw-rw-rw-  1 admin  staff  34 12 мар 18:29 foongus
+drwx-wxrwx  2 admin  staff  64 12 мар 18:30 petilil
+admin@MacBook-Pro-2 kadabra9 % cd ~/lab0
+admin@MacBook-Pro-2 lab0 % ls -l
+total 24
+----rw--w-  1 admin  staff   49 12 мар 18:23 horsea4
+dr-xrwxrwx  6 admin  staff  192 12 мар 18:34 kadabra9
+-rw-r--r--  1 admin  staff   38 12 мар 18:25 klang0
+drwxr-xr-x  2 admin  staff   64 12 мар 18:25 piplup1
+-rw-r--r--  1 admin  staff   38 12 мар 18:26 salamence4
+drwxr-xr-x  2 admin  staff   64 12 мар 18:26 zweilous9
+admin@MacBook-Pro-2 lab0 % chmod 640 klang0
+admin@MacBook-Pro-2 lab0 % ls -l
+total 24
+----rw--w-  1 admin  staff   49 12 мар 18:23 horsea4
+dr-xrwxrwx  6 admin  staff  192 12 мар 18:34 kadabra9
+-rw-r-----  1 admin  staff   38 12 мар 18:25 klang0
+drwxr-xr-x  2 admin  staff   64 12 мар 18:25 piplup1
+-rw-r--r--  1 admin  staff   38 12 мар 18:26 salamence4
+drwxr-xr-x  2 admin  staff   64 12 мар 18:26 zweilous9
+admin@MacBook-Pro-2 lab0 % chmod 667 piplup1
+admin@MacBook-Pro-2 lab0 % ls -l
+total 24
+----rw--w-  1 admin  staff   49 12 мар 18:23 horsea4
+dr-xrwxrwx  6 admin  staff  192 12 мар 18:34 kadabra9
+-rw-r-----  1 admin  staff   38 12 мар 18:25 klang0
+drw-rw-rwx  2 admin  staff   64 12 мар 18:25 piplup1
+-rw-r--r--  1 admin  staff   38 12 мар 18:26 salamence4
+drwxr-xr-x  2 admin  staff   64 12 мар 18:26 zweilous9
+admin@MacBook-Pro-2 lab0 % chmod 557 piplup1
+admin@MacBook-Pro-2 lab0 % ls -l
+total 24
+----rw--w-  1 admin  staff   49 12 мар 18:23 horsea4
+dr-xrwxrwx  6 admin  staff  192 12 мар 18:34 kadabra9
+-rw-r-----  1 admin  staff   38 12 мар 18:25 klang0
+dr-xr-xrwx  2 admin  staff   64 12 мар 18:25 piplup1
+-rw-r--r--  1 admin  staff   38 12 мар 18:26 salamence4
+drwxr-xr-x  2 admin  staff   64 12 мар 18:26 zweilous9
+admin@MacBook-Pro-2 lab0 % chmod 447 piplup1
+admin@MacBook-Pro-2 lab0 % ls -l            
+total 24
+----rw--w-  1 admin  staff   49 12 мар 18:23 horsea4
+dr-xrwxrwx  6 admin  staff  192 12 мар 18:34 kadabra9
+-rw-r-----  1 admin  staff   38 12 мар 18:25 klang0
+dr--r--rwx  2 admin  staff   64 12 мар 18:25 piplup1
+-rw-r--r--  1 admin  staff   38 12 мар 18:26 salamence4
+drwxr-xr-x  2 admin  staff   64 12 мар 18:26 zweilous9
+admin@MacBook-Pro-2 lab0 % chmod 337 piplup1
+admin@MacBook-Pro-2 lab0 % ls -l            
+total 24
+----rw--w-  1 admin  staff   49 12 мар 18:23 horsea4
+dr-xrwxrwx  6 admin  staff  192 12 мар 18:34 kadabra9
+-rw-r-----  1 admin  staff   38 12 мар 18:25 klang0
+d-wx-wxrwx  2 admin  staff   64 12 мар 18:25 piplup1
+-rw-r--r--  1 admin  staff   38 12 мар 18:26 salamence4
+drwxr-xr-x  2 admin  staff   64 12 мар 18:26 zweilous9
+admin@MacBook-Pro-2 lab0 % chmod 444 salamence4
+admin@MacBook-Pro-2 lab0 % ls -l               
+total 24
+----rw--w-  1 admin  staff   49 12 мар 18:23 horsea4
+dr-xrwxrwx  6 admin  staff  192 12 мар 18:34 kadabra9
+-rw-r-----  1 admin  staff   38 12 мар 18:25 klang0
+d-wx-wxrwx  2 admin  staff   64 12 мар 18:25 piplup1
+-r--r--r--  1 admin  staff   38 12 мар 18:26 salamence4
+drwxr-xr-x  2 admin  staff   64 12 мар 18:26 zweilous9
+admin@MacBook-Pro-2 lab0 % chmod 111 zweilous9
+admin@MacBook-Pro-2 lab0 % ls -l              
+total 24
+----rw--w-  1 admin  staff   49 12 мар 18:23 horsea4
+dr-xrwxrwx  6 admin  staff  192 12 мар 18:34 kadabra9
+-rw-r-----  1 admin  staff   38 12 мар 18:25 klang0
+d-wx-wxrwx  2 admin  staff   64 12 мар 18:25 piplup1
+-r--r--r--  1 admin  staff   38 12 мар 18:26 salamence4
+d--x--x--x  2 admin  staff   64 12 мар 18:26 zweilous9
+admin@MacBook-Pro-2 lab0 % chmod 222 zweilous9
+admin@MacBook-Pro-2 lab0 % ls -l              
+total 24
+----rw--w-  1 admin  staff   49 12 мар 18:23 horsea4
+dr-xrwxrwx  6 admin  staff  192 12 мар 18:34 kadabra9
+-rw-r-----  1 admin  staff   38 12 мар 18:25 klang0
+d-wx-wxrwx  2 admin  staff   64 12 мар 18:25 piplup1
+-r--r--r--  1 admin  staff   38 12 мар 18:26 salamence4
+d-w--w--w-  2 admin  staff   64 12 мар 18:26 zweilous9
+admin@MacBook-Pro-2 lab0 % chmod 333 zweilous9
+admin@MacBook-Pro-2 lab0 % ls -l              
+total 24
+----rw--w-  1 admin  staff   49 12 мар 18:23 horsea4
+dr-xrwxrwx  6 admin  staff  192 12 мар 18:34 kadabra9
+-rw-r-----  1 admin  staff   38 12 мар 18:25 klang0
+d-wx-wxrwx  2 admin  staff   64 12 мар 18:25 piplup1
+-r--r--r--  1 admin  staff   38 12 мар 18:26 salamence4
+d-wx-wx-wx  2 admin  staff   64 12 мар 18:26 zweilous9
+admin@MacBook-Pro-2 lab0 % chmod 444 zweilous9
+admin@MacBook-Pro-2 lab0 % ls -l              
+total 24
+----rw--w-  1 admin  staff   49 12 мар 18:23 horsea4
+dr-xrwxrwx  6 admin  staff  192 12 мар 18:34 kadabra9
+-rw-r-----  1 admin  staff   38 12 мар 18:25 klang0
+d-wx-wxrwx  2 admin  staff   64 12 мар 18:25 piplup1
+-r--r--r--  1 admin  staff   38 12 мар 18:26 salamence4
+dr--r--r--  2 admin  staff   64 12 мар 18:26 zweilous9
+admin@MacBook-Pro-2 lab0 % chmod 555 zweilous9
+admin@MacBook-Pro-2 lab0 % ls -l              
+total 24
+----rw--w-  1 admin  staff   49 12 мар 18:23 horsea4
+dr-xrwxrwx  6 admin  staff  192 12 мар 18:34 kadabra9
+-rw-r-----  1 admin  staff   38 12 мар 18:25 klang0
+d-wx-wxrwx  2 admin  staff   64 12 мар 18:25 piplup1
+-r--r--r--  1 admin  staff   38 12 мар 18:26 salamence4
+dr-xr-xr-x  2 admin  staff   64 12 мар 18:26 zweilous9
+admin@MacBook-Pro-2 lab0 % chmod 444 zweilous9
+admin@MacBook-Pro-2 lab0 % ls -l              
+total 24
+----rw--w-  1 admin  staff   49 12 мар 18:23 horsea4
+dr-xrwxrwx  6 admin  staff  192 12 мар 18:34 kadabra9
+-rw-r-----  1 admin  staff   38 12 мар 18:25 klang0
+d-wx-wxrwx  2 admin  staff   64 12 мар 18:25 piplup1
+-r--r--r--  1 admin  staff   38 12 мар 18:26 salamence4
+dr--r--r--  2 admin  staff   64 12 мар 18:26 zweilous9
+admin@MacBook-Pro-2 lab0 % chmod 666 zweilous9
+admin@MacBook-Pro-2 lab0 % ls -l              
+total 24
+----rw--w-  1 admin  staff   49 12 мар 18:23 horsea4
+dr-xrwxrwx  6 admin  staff  192 12 мар 18:34 kadabra9
+-rw-r-----  1 admin  staff   38 12 мар 18:25 klang0
+d-wx-wxrwx  2 admin  staff   64 12 мар 18:25 piplup1
+-r--r--r--  1 admin  staff   38 12 мар 18:26 salamence4
+drw-rw-rw-  2 admin  staff   64 12 мар 18:26 zweilous9
+admin@MacBook-Pro-2 lab0 % chmod 752 zweilous9
+admin@MacBook-Pro-2 lab0 % ls -l              
+total 24
+----rw--w-  1 admin  staff   49 12 мар 18:23 horsea4
+dr-xrwxrwx  6 admin  staff  192 12 мар 18:34 kadabra9
+-rw-r-----  1 admin  staff   38 12 мар 18:25 klang0
+d-wx-wxrwx  2 admin  staff   64 12 мар 18:25 piplup1
+-r--r--r--  1 admin  staff   38 12 мар 18:26 salamence4
+drwxr-x-w-  2 admin  staff   64 12 мар 18:26 zweilous9
+admin@MacBook-Pro-2 lab0 % cd /klang0
+cd: no such file or directory: /klang0
+admin@MacBook-Pro-2 lab0 % cat klang0
+weigth=112.4 height=24.0 atk=8
+def=10
+admin@MacBook-Pro-2 lab0 % echo -e "weigth=226.2 height=59.0 atk=14\ndef=8" > salamence4
+zsh: permission denied: salamence4
+admin@MacBook-Pro-2 lab0 % chmod 777 salamence4                                         
+admin@MacBook-Pro-2 lab0 % echo -e "weigth=226.2 height=59.0 atk=14\ndef=8" > salamence4
+admin@MacBook-Pro-2 lab0 % chmod 444 salamence4                                      
+admin@MacBook-Pro-2 lab0 % ls -l                                                        
+total 24
+----rw--w-  1 admin  staff   49 12 мар 18:23 horsea4
+dr-xrwxrwx  6 admin  staff  192 12 мар 18:34 kadabra9
+-rw-r-----  1 admin  staff   38 12 мар 18:25 klang0
+d-wx-wxrwx  2 admin  staff   64 12 мар 18:25 piplup1
+-r--r--r--  1 admin  staff   38 12 мар 21:37 salamence4
+drwxr-x-w-  2 admin  staff   64 12 мар 18:26 zweilous9
+admin@MacBook-Pro-2 lab0 % cd \piplup1
+admin@MacBook-Pro-2 piplup1 % echo -e "Способности Venom Focus Dry Skin\nAnticipation" > toxicroak
+admin@MacBook-Pro-2 piplup1 % echo -e "Способности Torrent Huge Power Thick\nFat" > azumarill
+admin@MacBook-Pro-2 piplup1 % echo -e "Развитые способности Hustle Sheer\nForce" > nidoking
+admin@MacBook-Pro-2 piplup1 % ls
+ls: .: Permission denied
+admin@MacBook-Pro-2 piplup1 % ls -l
+total 0
+ls: .: Permission denied
+admin@MacBook-Pro-2 piplup1 % cd ~/lab0
+admin@MacBook-Pro-2 lab0 % chmod 777 piplup1
+admin@MacBook-Pro-2 lab0 % cd \piplup1
+admin@MacBook-Pro-2 piplup1 % ls
+azumarill	nidoking	toxicroak
+admin@MacBook-Pro-2 piplup1 % ls -l
+total 24
+-rw-r--r--  1 admin  staff  52 12 мар 21:41 azumarill
+-rw-r--r--  1 admin  staff  59 12 мар 21:42 nidoking
+-rw-r--r--  1 admin  staff  57 12 мар 21:39 toxicroak
+admin@MacBook-Pro-2 piplup1 % chmode 006 azumarill
+zsh: command not found: chmode
+admin@MacBook-Pro-2 piplup1 % chmod 006 azumarill 
+admin@MacBook-Pro-2 piplup1 % chmode 444 nidoking
+zsh: command not found: chmode
+admin@MacBook-Pro-2 piplup1 % chmod 444 nidoking 
+admin@MacBook-Pro-2 piplup1 % chmod 012 toxicroak
+admin@MacBook-Pro-2 piplup1 % ls -l
+total 24
+-------rw-  1 admin  staff  52 12 мар 21:41 azumarill
+-r--r--r--  1 admin  staff  59 12 мар 21:42 nidoking
+------x-w-  1 admin  staff  57 12 мар 21:39 toxicroak
+admin@MacBook-Pro-2 piplup1 % chmod 046 toxicroak
+admin@MacBook-Pro-2 piplup1 % ls -l
+total 24
+-------rw-  1 admin  staff  52 12 мар 21:41 azumarill
+-r--r--r--  1 admin  staff  59 12 мар 21:42 nidoking
+----r--rw-  1 admin  staff  57 12 мар 21:39 toxicroak
+admin@MacBook-Pro-2 piplup1 % cd ~/lab0
+admin@MacBook-Pro-2 lab0 % chmod 337 piplup1
+admin@MacBook-Pro-2 lab0 % ls -l
+total 24
+----rw--w-  1 admin  staff   49 12 мар 18:23 horsea4
+dr-xrwxrwx  6 admin  staff  192 12 мар 18:34 kadabra9
+-rw-r-----  1 admin  staff   38 12 мар 18:25 klang0
+d-wx-wxrwx  5 admin  staff  160 12 мар 21:42 piplup1
+-r--r--r--  1 admin  staff   38 12 мар 21:37 salamence4
+drwxr-x-w-  2 admin  staff   64 12 мар 18:26 zweilous9
+admin@MacBook-Pro-2 lab0 % cd \zweilous9
+admin@MacBook-Pro-2 zweilous9 % mkdir forreress
+admin@MacBook-Pro-2 zweilous9 % mkdir lotad
+admin@MacBook-Pro-2 zweilous9 % echo -e "Возможности Overland=9 Surface=5 Jump=3 Power=1\nIntelligence=3 Tracker=0" > houndoom
+admin@MacBook-Pro-2 zweilous9 % mkdir snorunt
+admin@MacBook-Pro-2 zweilous9 % chmod 733 forretress   
+chmod: forretress: No such file or directory
+admin@MacBook-Pro-2 zweilous9 % mv forreress forretress
+admin@MacBook-Pro-2 zweilous9 % chmod 733 forretress   
+admin@MacBook-Pro-2 zweilous9 % chmod 537 lotad 
+admin@MacBook-Pro-2 zweilous9 % chmod 404 houndoom
+admin@MacBook-Pro-2 zweilous9 % chmod 576 snorunt
+admin@MacBook-Pro-2 zweilous9 % ls -l
+total 8
+drwx-wx-wx  2 admin  staff  64 12 мар 21:47 forretress
+-r-----r--  1 admin  staff  84 12 мар 21:48 houndoom
+dr-x-wxrwx  2 admin  staff  64 12 мар 21:47 lotad
+dr-xrwxrw-  2 admin  staff  64 12 мар 21:49 snorunt
+admin@MacBook-Pro-2 zweilous9 % cd ~/lab0
+admin@MacBook-Pro-2 lab0 % ln -s piplup1 Copy_79
+admin@MacBook-Pro-2 lab0 % cat lab0/piplup1/azumarill lab0/kadabra9/dusclops > lab0/horsea4_29
+zsh: no such file or directory: lab0/horsea4_29
+admin@MacBook-Pro-2 lab0 % cat /piplup1/azumarill /kadabra9/dusclops > /horsea4_29 
+zsh: read-only file system: /horsea4_29
+admin@MacBook-Pro-2 lab0 % cat piplup1/azumarill kadabra9/dusclops > horsea4_29 
+cat: piplup1/azumarill: Permission denied
+cat: kadabra9/dusclops: Permission denied
+admin@MacBook-Pro-2 lab0 % ls -l piplup1/azumarill
+ls -l kadabra9/dusclops
+-------rw-  1 admin  staff  52 12 мар 21:41 piplup1/azumarill
+-------r--  1 admin  staff  52 12 мар 18:30 kadabra9/dusclops
+admin@MacBook-Pro-2 lab0 % chmod +r piplup1/azumarill
+chmod +r kadabra9/dusclops
+admin@MacBook-Pro-2 lab0 % ls -l piplup1/azumarill   
+ls -l kadabra9/dusclops   
+-r--r--rw-  1 admin  staff  52 12 мар 21:41 piplup1/azumarill
+-r--r--r--  1 admin  staff  52 12 мар 18:30 kadabra9/dusclops
+admin@MacBook-Pro-2 lab0 % cat piplup1/azumarill kadabra9/dusclops > horsea4_29
+admin@MacBook-Pro-2 lab0 % chmod -r piplup1/azumarill                         
+chmod -r kadabra9/dusclops
+admin@MacBook-Pro-2 lab0 % ls -l piplup1/azumarill                             
+ls -l kadabra9/dusclops
+--------w-  1 admin  staff  52 12 мар 21:41 piplup1/azumarill
+----------  1 admin  staff  52 12 мар 18:30 kadabra9/dusclops
+admin@MacBook-Pro-2 lab0 % chmod 006 piplup1/azumarill
+admin@MacBook-Pro-2 lab0 % chmod 004 kadabra9/dusclops
+admin@MacBook-Pro-2 lab0 % ls -l piplup1/azumarill    
+ls -l kadabra9/dusclops
+-------rw-  1 admin  staff  52 12 мар 21:41 piplup1/azumarill
+-------r--  1 admin  staff  52 12 мар 18:30 kadabra9/dusclops
+admin@MacBook-Pro-2 lab0 % cp klang0 piplup1/nidokingklang
+admin@MacBook-Pro-2 lab0 % ln horsea4 kadabra9/foongushorsea
+ln: kadabra9/foongushorsea: Permission denied
+admin@MacBook-Pro-2 lab0 % ls -l kdabra9
+ls: kdabra9: No such file or directory
+admin@MacBook-Pro-2 lab0 % ls -l kadabra9
+total 16
+-------r--  1 admin  staff  52 12 мар 18:30 dusclops
+-rw-rw-rw-  1 admin  staff  34 12 мар 18:29 foongus
+drwx-wxrwx  2 admin  staff  64 12 мар 18:30 petilil
+admin@MacBook-Pro-2 lab0 % ls -l           
+total 32
+lrwxr-xr-x  1 admin  staff    7 12 мар 21:54 Copy_79 -> piplup1
+----rw--w-  1 admin  staff   49 12 мар 18:23 horsea4
+-rw-r--r--  1 admin  staff  104 12 мар 21:57 horsea4_29
+dr-xrwxrwx  6 admin  staff  192 12 мар 18:34 kadabra9
+-rw-r-----  1 admin  staff   38 12 мар 18:25 klang0
+d-wx-wxrwx  6 admin  staff  192 12 мар 21:58 piplup1
+-r--r--r--  1 admin  staff   38 12 мар 21:37 salamence4
+drwxr-x-w-  6 admin  staff  192 12 мар 21:50 zweilous9
+admin@MacBook-Pro-2 lab0 % chmod 777 kadabra9
+admin@MacBook-Pro-2 lab0 % ln horsea4 kadabra9/foongushorsea
+admin@MacBook-Pro-2 lab0 % chmod 577 kadabra9              
+admin@MacBook-Pro-2 lab0 % ls -l
+total 32
+lrwxr-xr-x  1 admin  staff    7 12 мар 21:54 Copy_79 -> piplup1
+----rw--w-  2 admin  staff   49 12 мар 18:23 horsea4
+-rw-r--r--  1 admin  staff  104 12 мар 21:57 horsea4_29
+dr-xrwxrwx  7 admin  staff  224 12 мар 22:01 kadabra9
+-rw-r-----  1 admin  staff   38 12 мар 18:25 klang0
+d-wx-wxrwx  6 admin  staff  192 12 мар 21:58 piplup1
+-r--r--r--  1 admin  staff   38 12 мар 21:37 salamence4
+drwxr-x-w-  6 admin  staff  192 12 мар 21:50 zweilous9
+admin@MacBook-Pro-2 lab0 % cp -r piplup1 zweilous9/forretress
+cp: piplup1: unable to copy extended attributes to zweilous9/forretress/piplup1: Permission denied
+cp: piplup1: Permission denied
+admin@MacBook-Pro-2 lab0 % ls -ld piplup1
+d-wx-wxrwx  6 admin  staff  192 12 мар 21:58 piplup1
+admin@MacBook-Pro-2 lab0 % ls -ld zweilous9/forretress
+drwx-wx-wx  3 admin  staff  96 12 мар 22:02 zweilous9/forretress
+admin@MacBook-Pro-2 lab0 % chmod 777 piplup1          
+admin@MacBook-Pro-2 lab0 % cp -r piplup1 zweilous9/forretress
+cp: piplup1/toxicroak: Permission denied
+cp: piplup1/azumarill: Permission denied
+admin@MacBook-Pro-2 lab0 % chmod 377 piplup1                 
+admin@MacBook-Pro-2 lab0 % chmod 337 piplup1
+admin@MacBook-Pro-2 lab0 % sudo cp -r piplup1 zweilous9/forretress
+Password:
+admin@MacBook-Pro-2 lab0 % ln -s salamence4 kadabra9/dusclopssalamence
+ln: kadabra9/dusclopssalamence: Permission denied
+admin@MacBook-Pro-2 lab0 % sudo ln -s salamence4 kadabra9/dusclopssalamence
+admin@MacBook-Pro-2 lab0 % cp salamence4 zweilous9/snorunt
+cp: zweilous9/snorunt/salamence4: Permission denied
+admin@MacBook-Pro-2 lab0 % sudo cp salamence4 zweilous9/snorunt
+admin@MacBook-Pro-2 lab0 % find lab0 -name "*l" -type f -exec wc -c {} + | sort -n 2>&1
+find: lab0: No such file or directory
+admin@MacBook-Pro-2 lab0 % cd ~
+admin@MacBook-Pro-2 ~ % find lab0 -name "*l" -type f -exec wc -c {} + | sort -n 2>&1
+find: lab0/piplup1: Permission denied
+wc: lab0/zweilous9/forretress/piplup1/azumarill: open: Permission denied
+admin@MacBook-Pro-2 ~ % sudo find lab0 -name "*l" -type f -exec wc -c {} + | sort -n 2>&1
+      52 lab0/piplup1/azumarill
+      52 lab0/zweilous9/forretress/piplup1/azumarill
+     104 total
+admin@MacBook-Pro-2 ~ % sudo find lab0 -name "*9" -type f -exec ls -lt {} + | head -n 3
+-rw-r--r--  1 admin  staff  104 12 мар 21:57 lab0/horsea4_29
+admin@MacBook-Pro-2 ~ % sudo find lab0 -name "p*" -type f -exec cat {} + | sort -rz 2>/tmp/errors.txt
+admin@MacBook-Pro-2 ~ % cat klang0 | sort -rz 2>/tmp/errors.txt
+cat: klang0: No such file or directory
+admin@MacBook-Pro-2 ~ % sudo cat ~/lab0/klang0 | sort -rz 2>/tmp/errors.txt 
+weigth=112.4 height=24.0 atk=8
+def=10
+admin@MacBook-Pro-2 ~ % sudo find lab0 -type f -exec grep -l "ho" {} + | xargs ls -lt | head -n 4
+-rw-r--r--@ 1 admin  staff  6148 12 мар 18:34 lab0/.DS_Store
+-rw-r--r--@ 1 admin  staff  6148 12 мар 18:34 lab0/kadabra9/.DS_Store
+admin@MacBook-Pro-2 ~ % find lab0 -type f -exec grep -l "ho" {} + | xargs ls -lt | head -n 4
+find: lab0/piplup1: Permission denied
+grep: lab0/kadabra9/dusclops: Permission denied
+grep: lab0/kadabra9/foongushorsea: Permission denied
+grep: lab0/zweilous9/forretress/piplup1/azumarill: Permission denied
+grep: lab0/horsea4: Permission denied
+-rw-r--r--@ 1 admin  staff  6148 12 мар 18:34 lab0/.DS_Store
+-rw-r--r--@ 1 admin  staff  6148 12 мар 18:34 lab0/kadabra9/.DS_Store
+admin@MacBook-Pro-2 ~ % sudo find lab0 -type f -exec grep -l "ho" {} + | xargs ls -lt | head -n 4
+-rw-r--r--@ 1 admin  staff  6148 12 мар 18:34 lab0/.DS_Store
+-rw-r--r--@ 1 admin  staff  6148 12 мар 18:34 lab0/kadabra9/.DS_Store
+admin@MacBook-Pro-2 ~ % sudo find lab0 -type f -exec grep -l "ho" {} + | xargs ls -lt | head -n 4
+-rw-r--r--@ 1 admin  staff  6148 12 мар 18:34 lab0/.DS_Store
+-rw-r--r--@ 1 admin  staff  6148 12 мар 18:34 lab0/kadabra9/.DS_Store
+admin@MacBook-Pro-2 ~ % rm salamence4
+rm: salamence4: No such file or directory
+admin@MacBook-Pro-2 ~ % cd ~/lab0
+admin@MacBook-Pro-2 lab0 % rm salamence4
+override r--r--r-- admin/staff for salamence4? 
+admin@MacBook-Pro-2 lab0 % ls -l
+total 32
+lrwxr-xr-x  1 admin  staff    7 12 мар 21:54 Copy_79 -> piplup1
+----rw--w-  2 admin  staff   49 12 мар 18:23 horsea4
+-rw-r--r--  1 admin  staff  104 12 мар 21:57 horsea4_29
+dr-xrwxrwx  8 admin  staff  256 12 мар 22:07 kadabra9
+-rw-r-----  1 admin  staff   38 12 мар 18:25 klang0
+d-wx-wxrwx  6 admin  staff  192 12 мар 21:58 piplup1
+-r--r--r--  1 admin  staff   38 12 мар 21:37 salamence4
+drwxr-x-w-  6 admin  staff  192 12 мар 21:50 zweilous9
+admin@MacBook-Pro-2 lab0 % rm salamence4
+override r--r--r-- admin/staff for salamence4? y
+admin@MacBook-Pro-2 lab0 % ls -l
+total 24
+lrwxr-xr-x  1 admin  staff    7 12 мар 21:54 Copy_79 -> piplup1
+----rw--w-  2 admin  staff   49 12 мар 18:23 horsea4
+-rw-r--r--  1 admin  staff  104 12 мар 21:57 horsea4_29
+dr-xrwxrwx  8 admin  staff  256 12 мар 22:07 kadabra9
+-rw-r-----  1 admin  staff   38 12 мар 18:25 klang0
+d-wx-wxrwx  6 admin  staff  192 12 мар 21:58 piplup1
+drwxr-x-w-  6 admin  staff  192 12 мар 21:50 zweilous9
+admin@MacBook-Pro-2 lab0 % rm zweilous9/houndoom
+override r-----r-- admin/staff for zweilous9/houndoom? y
+admin@MacBook-Pro-2 lab0 % rm Copy_*
+admin@MacBook-Pro-2 lab0 % rm kadabra9/foongushors*
+override ---rw--w- admin/staff for kadabra9/foongushorsea? y
+rm: kadabra9/foongushorsea: Permission denied
+admin@MacBook-Pro-2 lab0 % rmdir zweilous9
+rmdir: zweilous9: Directory not empty
+admin@MacBook-Pro-2 lab0 % rmdir -r zweilous9
+rmdir: illegal option -- r
+usage: rmdir [-pv] directory ...
+admin@MacBook-Pro-2 lab0 % ls -l
+total 24
+----rw--w-  2 admin  staff   49 12 мар 18:23 horsea4
+-rw-r--r--  1 admin  staff  104 12 мар 21:57 horsea4_29
+dr-xrwxrwx  8 admin  staff  256 12 мар 22:07 kadabra9
+-rw-r-----  1 admin  staff   38 12 мар 18:25 klang0
+d-wx-wxrwx  6 admin  staff  192 12 мар 21:58 piplup1
+drwxr-x-w-  5 admin  staff  160 12 мар 22:16 zweilous9
+admin@MacBook-Pro-2 lab0 % rm -r zweilous9   
+override r-x-wxrwx admin/staff for zweilous9/lotad? y
+override r--r--r-- root/staff for zweilous9/snorunt/salamence4? y
+rm: zweilous9/snorunt/salamence4: Permission denied
+override r-xrwxrw- admin/staff for zweilous9/snorunt? y
+rm: zweilous9/snorunt: Permission denied
+override ---r--r-- root/staff for zweilous9/forretress/piplup1/toxicroak? y
+override ------r-- root/staff for zweilous9/forretress/piplup1/azumarill? y
+override r--r--r-- admin/staff for zweilous9/forretress/piplup1/nidoking? y
+rm: zweilous9: Permission denied
+admin@MacBook-Pro-2 lab0 % sudo rm -rf zweilous9
+admin@MacBook-Pro-2 lab0 % rmdir kadabra9/petilil
+rmdir: kadabra9/petilil: Permission denied
+admin@MacBook-Pro-2 lab0 % sudo rmdir kadabra9/petilil
+admin@MacBook-Pro-2 lab0 % ls -l
+total 24
+----rw--w-  2 admin  staff   49 12 мар 18:23 horsea4
+-rw-r--r--  1 admin  staff  104 12 мар 21:57 horsea4_29
+dr-xrwxrwx  7 admin  staff  224 12 мар 22:18 kadabra9
+-rw-r-----  1 admin  staff   38 12 мар 18:25 klang0
+d-wx-wxrwx  6 admin  staff  192 12 мар 21:58 piplup1
+admin@MacBook-Pro-2 lab0 % exit 
+
+Saving session...
+...copying shared history...
+...saving history...truncating history files...
+...completed.
+Deleting expired sessions...none found.
+
+[Процесс завершен]
+
