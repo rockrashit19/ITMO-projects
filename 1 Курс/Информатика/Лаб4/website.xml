@@ -1,0 +1,45 @@
+<schedule>
+    <day name="Cб">
+        <lesson>
+            <type>Лекция</type>
+            <name>Параллельная и распределенная обработка данных</name>
+            <weeks>
+                <week>1</week>
+                <week>3</week>
+                <week>7</week>
+                <week>9</week>
+                <week>11</week>
+                <week>13</week>
+                <week>15</week>
+                <week>17</week>
+            </weeks>
+            <time>
+                <start>9:50</start>
+                <end>11:20</end>
+            </time>
+            <visit>fulltime</visit>
+            <place>
+                <body>kronva</body>
+                <room>1320</room>
+            </place>
+            <group>ПРОБД 1</group>
+        </lesson>
+        <lesson>
+            <type>Лекция</type>
+            <name>Обработка звука и речи</name>
+            <weeks>
+                <week>четная неделя</week>
+            </weeks>
+            <time>
+                <start>9:50</start>
+                <end>11:20</end>
+            </time>
+            <visit>fulltime</visit>
+            <place>
+                <body>kronva</body>
+                <room>1320</room>
+            </place>
+            <group>ОБЗР 1</group>
+        </lesson>
+    </day>
+</schedule>
