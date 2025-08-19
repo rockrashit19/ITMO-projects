@@ -14,7 +14,7 @@ class XmlParser:
         info_has_tags, rest_has_tags = self.__has_tags(info), self.__has_tags(rest)
 
         node = {}
-        if attrs:  # сохраняем атрибуты
+        if attrs:  
             node["@attrs"] = attrs
 
         if not info_has_tags and not rest_has_tags:
@@ -37,7 +37,6 @@ class XmlParser:
             node |= self.__find_sub(info)
             return {tag: node} | self.__find_sub(rest)
         
-        # Fallback return to ensure all paths return a dict
         return {}
 
     def __get_list(self, lines):
