@@ -1,94 +1,88 @@
-def read_file(filename):
-    with open(filename, 'r', encoding='utf-8') as f:
-        return f.readlines()
+import re
+import json
 
-def parse_xml(lines):
-    stack = []
-    current_dict = {}
-    root = current_dict
-    current_tag = None
-    content = ""
-    
-    for line in lines:
-        line = line.strip()
-        if not line or line.startswith('<?xml'):
-            continue
-        i = 0
-        while i < len(line):
-            if line[i] == '<':
-                if line[i+1] == '/':
-                    end = line.find('>', i)
-                    tag = line[i+2:end]
-                    if content.strip():
-                        if current_tag in current_dict:
-                            if isinstance(current_dict[current_tag], list):
-                                current_dict[current_tag].append(content.strip())
-                            else:
-                                current_dict[current_tag] = [current_dict[current_tag], content.strip()]
-                        else:
-                            current_dict[current_tag] = content.strip()
-                    content = ""
-                    stack.pop()
-                    if stack:
-                        current_dict = stack[-1]
-                    current_tag = None
-                    i = end + 1
-                else:
-                    end = line.find('>', i)
-                    tag_start = line[i+1:end]
-                    tag_name = tag_start.split()[0]
-                    attrs = {}
-                    if ' ' in tag_start:
-                        attr_str = tag_start[len(tag_name):].strip()
-                        attr_parts = attr_str.split('=')
-                        for j in range(0, len(attr_parts)-1, 2):
-                            key = attr_parts[j].strip()
-                            value = attr_parts[j+1].strip().strip('"')
-                            attrs[key] = value
-                    new_dict = {'@attributes': attrs} if attrs else {}
-                    if tag_name in current_dict:
-                        if not isinstance(current_dict[tag_name], list):
-                            current_dict[tag_name] = [current_dict[tag_name]]
-                        current_dict[tag_name].append(new_dict)
-                    else:
-                        if tag_name == 'day' and tag_name not in current_dict:
-                            current_dict[tag_name] = [new_dict]
-                        else:
-                            current_dict[tag_name] = new_dict
-                    stack.append(current_dict)
-                    current_dict = new_dict
-                    current_tag = tag_name
-                    i = end + 1
-            else:
-                content += line[i]
-                i += 1
-    
-    return root
 
-def dict_to_json(data, indent=0):
-    if isinstance(data, dict):
-        if not data:
-            return "{}"
-        result = ["{"]
-        for key, value in data.items():
-            line = '  ' * indent + f'"{key}": '
-            if isinstance(value, dict):
-                line += dict_to_json(value, indent + 1)
-            elif isinstance(value, list):
-                line += '[' + ', '.join(dict_to_json(item, indent + 1) if isinstance(item, dict) else f'"{item}"' for item in value) + ']'
-            else:
-                line += f'"{value}"'
-            result.append(line + ',')
-        result[-1] = result[-1][:-1]
-        result.append('  ' * (indent - 1) + "}")
-        return '\n'.join(result)
-    return str(data)
+class XmlParser:
 
-def convert_xml_to_json(input_file, output_file):
-    lines = read_file(input_file)
-    parsed_data = parse_xml(lines)
-    json_str = dict_to_json(parsed_data)
-    with open(output_file, 'w', encoding='utf-8') as f:
-        f.write(json_str)
+    def __init__(self, xml_str: str):
+        self.xml_doc = xml_str
+        self.__del_info_data()
+        self.parsed = self.__find_sub(self.xml_doc)
 
-convert_xml_to_json('data/input.xml', 'data/output.json')
+    def __find_sub(self, line: str) -> dict:
+        tag, attrs, info, rest = self.__match_tag(line)
+        info_has_tags, rest_has_tags = self.__has_tags(info), self.__has_tags(rest)
+
+        node = {}
+        if attrs:  # сохраняем атрибуты
+            node["@attrs"] = attrs
+
+        if not info_has_tags and not rest_has_tags:
+            node["#text"] = info.strip()
+            return {tag: node} if attrs else {tag: info.strip()}
+
+        if not info_has_tags and rest_has_tags:
+            if self.__get_tag(rest) == tag:
+                return {tag: self.__get_list(line)}
+            node["#text"] = info.strip()
+            return {tag: node} | self.__find_sub(rest)
+
+        if info_has_tags and not rest_has_tags:
+            node |= self.__find_sub(info)
+            return {tag: node}
+
+        if info_has_tags and rest_has_tags:
+            if self.__get_tag(rest) == tag:
+                return {tag: [self.__find_sub(info), self.__find_sub(rest)]}
+            node |= self.__find_sub(info)
+            return {tag: node} | self.__find_sub(rest)
+        
+        # Fallback return to ensure all paths return a dict
+        return {}
+
+    def __get_list(self, lines):
+        infos = re.findall(r'<(\b\w+\b[\w ]*)(?:\s+[^>]*)?>(.*?)</\1>', lines, flags=re.S)
+        return [i[1].strip() for i in infos]
+
+    @staticmethod
+    def __has_tags(lines):
+        matched = re.search(r'<(\b\w+\b)[^>]*>.*?</\1>', lines, flags=re.S)
+        return bool(matched)
+
+    @staticmethod
+    def __get_tag(lines):
+        match = re.search(r'<(\b\w+\b)[^>]*>', lines, flags=re.S)
+        return match.group(1) if match else None
+
+    @staticmethod
+    def __match_tag(lines):
+        matched = re.search(
+            r'<(?P<tag>\b\w+\b)(?P<attrs>[^>]*)>\s?(?P<info>.*?)</\1>\s?(?P<rest>.*)',
+            lines,
+            flags=re.S
+        )
+        if not matched:
+            return "", {}, "", ""
+        
+        tag = matched.group("tag")
+        attrs_str = matched.group("attrs").strip()
+        info = re.sub(r'^ {0,4}\t?', '', matched.group("info"), flags=re.M)
+        rest = matched.group("rest")
+
+        attrs = {}
+        if attrs_str:
+            for pair in re.findall(r'(\w+)="(.*?)"', attrs_str):
+                attrs[pair[0]] = pair[1]
+
+        return tag, attrs, info, rest
+
+    def __del_info_data(self):
+        self.xml_doc = re.sub(r'<\?.*?\?>\s*', '', self.xml_doc)
+
+
+if __name__ == '__main__':
+    with open("data/input.xml", "r", encoding="utf-8") as input_file:
+        parser = XmlParser(input_file.read())
+
+    with open("data/output.json", "w", encoding="utf-8") as output_file:
+        json.dump(parser.parsed, output_file, ensure_ascii=False, indent=4)
