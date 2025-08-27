@@ -1,87 +1,182 @@
-import re
-import json
+from typing import Tuple, Dict, Any, List, Optional
 
+class Cursor:
+    def __init__(self, s: str):
+        self.s = s
+        self.i = 0
+        self.n = len(s)
 
-class XmlParser:
+    def peek(self) -> str:
+        return self.s[self.i] if self.i < self.n else ""
 
-    def __init__(self, xml_str: str):
-        self.xml_doc = xml_str
-        self.__del_info_data()
-        self.parsed = self.__find_sub(self.xml_doc)
+    def get(self) -> str:
+        ch = self.peek()
+        if ch:
+            self.i += 1
+        return ch
 
-    def __find_sub(self, line: str) -> dict:
-        tag, attrs, info, rest = self.__match_tag(line)
-        info_has_tags, rest_has_tags = self.__has_tags(info), self.__has_tags(rest)
+    def skip_ws(self):
+        while self.i < self.n and self.s[self.i].isspace():
+            self.i += 1
 
-        node = {}
-        if attrs:  
+    def startswith(self, text: str) -> bool:
+        return self.s.startswith(text, self.i)
+
+def parse_name(cur: Cursor) -> str:
+    name_chars = []
+    ch = cur.peek()
+    if not ch:
+        return ""
+    while cur.i < cur.n:
+        ch = cur.peek()
+        if ch.isalnum() or ch in "_-:.":
+            name_chars.append(ch)
+            cur.get()
+        else:
+            break
+    return "".join(name_chars)
+
+def parse_attr_value(cur: Cursor) -> str:
+    cur.skip_ws()
+    quote = cur.get()
+    val_chars = []
+    while cur.i < cur.n and cur.peek() != quote:
+        val_chars.append(cur.get())
+    if cur.peek() == quote:
+        cur.get()
+    return "".join(val_chars)
+
+def parse_attrs(cur: Cursor) -> Dict[str, str]:
+    attrs: Dict[str, str] = {}
+    while True:
+        cur.skip_ws()
+        ch = cur.peek()
+        if not ch or ch in ">/":
+            break
+        name = parse_name(cur)
+        cur.skip_ws()
+        if cur.peek() == "=":
+            cur.get()
+            cur.skip_ws()
+            if cur.peek() in "\"'":
+                val = parse_attr_value(cur)
+                attrs[name] = val
+            else:
+                val_buf = []
+                while cur.i < cur.n and (not cur.peek().isspace()) and cur.peek() not in ">/" :
+                    val_buf.append(cur.get())
+                attrs[name] = "".join(val_buf)
+        else:
+            attrs[name] = ""
+    return attrs
+
+def parse_text(cur: Cursor) -> str:
+    buf = []
+    while cur.i < cur.n and cur.peek() != "<":
+        buf.append(cur.get())
+    return "".join(buf)
+
+def parse_element(cur: Cursor) -> Tuple[str, Dict[str, Any]]:
+    cur.skip_ws()
+    if cur.get() != "<":
+        return "", {}
+    tag = parse_name(cur)
+    attrs = parse_attrs(cur)
+    if cur.peek() == "/":
+        cur.get()
+        if cur.peek() == ">":
+            cur.get()
+        node: Dict[str, Any] = {}
+        if attrs:
             node["@attrs"] = attrs
+        return tag, node
+    if cur.peek() == ">":
+        cur.get()
+    node: Dict[str, Any] = {}
+    if attrs:
+        node["@attrs"] = attrs
 
-        if not info_has_tags and not rest_has_tags:
-            node["#text"] = info.strip()
-            return {tag: node} if attrs else {tag: info.strip()}
+    children_by_tag: Dict[str, List[Any]] = {}
+    text_accum: List[str] = []
 
-        if not info_has_tags and rest_has_tags:
-            if self.__get_tag(rest) == tag:
-                return {tag: self.__get_list(line)}
-            node["#text"] = info.strip()
-            return {tag: node} | self.__find_sub(rest)
+    while cur.i < cur.n:
+        if cur.startswith("</"):
+            cur.get(); cur.get() 
+            end_name = parse_name(cur)
+            if cur.peek() == ">":
+                cur.get()
+            text_str = "".join(text_accum).strip()
+            if text_str:
+                if node:
+                    node["#text"] = text_str
+                else:
+                    return tag, text_str # type: ignore
+            for child_tag, items in children_by_tag.items():
+                node[child_tag] = items[0] if len(items) == 1 else items
+            return tag, node
 
-        if info_has_tags and not rest_has_tags:
-            node |= self.__find_sub(info)
-            return {tag: node}
+        if cur.peek() == "<":
+            ctag, cnode = parse_element(cur)
+            if ctag:
+                children_by_tag.setdefault(ctag, []).append(cnode)
+        else:
+            text_accum.append(parse_text(cur))
 
-        if info_has_tags and rest_has_tags:
-            if self.__get_tag(rest) == tag:
-                return {tag: [self.__find_sub(info), self.__find_sub(rest)]}
-            node |= self.__find_sub(info)
-            return {tag: node} | self.__find_sub(rest)
-        
-        return {}
+    text_str = "".join(text_accum).strip()
+    if text_str:
+        if node:
+            node["#text"] = text_str
+        else:
+            return tag, text_str # type: ignore
+    for child_tag, items in children_by_tag.items():
+        node[child_tag] = items[0] if len(items) == 1 else items
+    return tag, node
 
-    def __get_list(self, lines):
-        infos = re.findall(r'<(\b\w+\b[\w ]*)(?:\s+[^>]*)?>(.*?)</\1>', lines, flags=re.S)
-        return [i[1].strip() for i in infos]
+def xml_to_obj(xml_text: str) -> Dict[str, Any]:
+    cur = Cursor(xml_text)
+    tag, node = parse_element(cur)
+    return {tag: node} if tag else {}
 
-    @staticmethod
-    def __has_tags(lines):
-        matched = re.search(r'<(\b\w+\b)[^>]*>.*?</\1>', lines, flags=re.S)
-        return bool(matched)
+def dumps_json(obj: Any, indent: int = 2, ensure_ascii: bool = False, level: int = 0) -> str:
+    sp = " " * (indent * level)
 
-    @staticmethod
-    def __get_tag(lines):
-        match = re.search(r'<(\b\w+\b)[^>]*>', lines, flags=re.S)
-        return match.group(1) if match else None
+    def esc(s: str) -> str:
+        out = []
+        for ch in s:
+            o = ord(ch)
+            if ch == '"': out.append('\\"')
+            elif ch == '\\': out.append('\\\\')
+            elif ch == '\b': out.append('\\b')
+            elif ch == '\f': out.append('\\f')
+            elif ch == '\n': out.append('\\n')
+            elif ch == '\r': out.append('\\r')
+            elif ch == '\t': out.append('\\t')
+            elif o < 0x20 or (ensure_ascii and o > 0x7F):
+                out.append('\\u%04x' % o)
+            else:
+                out.append(ch)
+        return '"' + "".join(out) + '"'
 
-    @staticmethod
-    def __match_tag(lines):
-        matched = re.search(
-            r'<(?P<tag>\b\w+\b)(?P<attrs>[^>]*)>\s?(?P<info>.*?)</\1>\s?(?P<rest>.*)',
-            lines,
-            flags=re.S
-        )
-        if not matched:
-            return "", {}, "", ""
-        
-        tag = matched.group("tag")
-        attrs_str = matched.group("attrs").strip()
-        info = re.sub(r'^ {0,4}\t?', '', matched.group("info"), flags=re.M)
-        rest = matched.group("rest")
+    if obj is None: return "null"
+    if isinstance(obj, bool): return "true" if obj else "false"
+    if isinstance(obj, (int, float)): return str(obj)
+    if isinstance(obj, str): return esc(obj)
+    if isinstance(obj, list):
+        if not obj: return "[]"
+        items = [dumps_json(x, indent, ensure_ascii, level + 1) for x in obj]
+        return "[\n" + ",\n".join(" " * (indent*(level+1)) + it for it in items) + "\n" + sp + "]"
+    if isinstance(obj, dict):
+        if not obj: return "{}"
+        items = []
+        for k, v in obj.items():
+            items.append(esc(str(k)) + ": " + dumps_json(v, indent, ensure_ascii, level + 1))
+        return "{\n" + ",\n".join(" " * (indent*(level+1)) + it for it in items) + "\n" + sp + "}"
+    return esc(str(obj))
 
-        attrs = {}
-        if attrs_str:
-            for pair in re.findall(r'(\w+)="(.*?)"', attrs_str):
-                attrs[pair[0]] = pair[1]
-
-        return tag, attrs, info, rest
-
-    def __del_info_data(self):
-        self.xml_doc = re.sub(r'<\?.*?\?>\s*', '', self.xml_doc)
-
-
-if __name__ == '__main__':
-    with open("data/input.xml", "r", encoding="utf-8") as input_file:
-        parser = XmlParser(input_file.read())
-
-    with open("data/output.json", "w", encoding="utf-8") as output_file:
-        json.dump(parser.parsed, output_file, ensure_ascii=False, indent=4)
+if __name__ == "__main__":
+    with open("data/input.xml", "r", encoding="utf-8") as f:
+        xml_text = f.read()
+    obj = xml_to_obj(xml_text)
+    out = dumps_json(obj, indent=2, ensure_ascii=False)
+    with open("data/output.json", "w", encoding="utf-8") as f:
+        f.write(out)
