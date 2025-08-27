@@ -1,3 +1,5 @@
+package com.example.lab34.rest;
+
 import org.jboss.resteasy.plugins.interceptors.CorsFilter;
 
 import javax.ws.rs.core.Application;

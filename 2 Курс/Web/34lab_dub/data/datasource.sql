@@ -15,3 +15,8 @@ CREATE TABLE POINT_RESULTS (
                                CONSTRAINT FK_POINT_USER FOREIGN KEY (USER_ID)
                                    REFERENCES USERS(ID)
 );
+
+INSERT INTO USERS (LOGIN, PASSWORD_HASH)
+VALUES ('user', 'user');
+
+COMMIT;

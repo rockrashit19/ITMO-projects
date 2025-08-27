@@ -1,0 +1,11 @@
+com/example/lab34/entity/User.class
+com/example/lab34/ejb/AuthService.class
+com/example/lab34/rest/AuthResource$Creds.class
+com/example/lab34/rest/PointResource$CheckRequest.class
+com/example/lab34/rest/PointResource.class
+com/example/lab34/ejb/PointService.class
+com/example/lab34/rest/RestApplication.class
+com/example/lab34/filter/CorsFilterDisabled.class
+com/example/lab34/rest/AuthResource.class
+com/example/lab34/entity/PointResult.class
+com/example/lab34/filter/CorsServletFilter.class

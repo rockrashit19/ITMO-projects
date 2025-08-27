@@ -1,10 +1,15 @@
 const BASE = 'http://localhost:8080/lab34-backend/api';
 export async function login(creds) {
-    const resp = await fetch(`${BASE}/auth/login`, {
-        method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(creds)
+    const response = await fetch('http://localhost:8080/lab34-backend/api/auth/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(creds),
+        credentials: 'include',
     });
-    if(!resp.ok) throw new Error('Unauthorized');
-    return resp.json();
+    if (!response.ok) throw new Error('Login failed');
+    return response.json();
 }
 export async function checkPoint(x,y,r,userId) {
     const resp = await fetch(`${BASE}/points/check`,{
