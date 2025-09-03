@@ -1,4 +1,3 @@
-# xml_by_grammar.py
 from pathlib import Path
 import json
 from lark import Lark, Transformer, v_args
