@@ -1,0 +1,24 @@
+:root { --bp-mobile: 851px; --bp-desktop: 1174px; }
+body { font-family: -apple-system, system-ui, Arial, sans-serif; margin:0; }
+.container { max-width: 1300px; margin: 0 auto; padding: 12px; }
+.header { display:flex; gap: 12px; align-items:center; padding: 8px 0; border-bottom: 1px solid #eee; }
+
+.login .form { display:flex; flex-direction:column; gap:8px; max-width:300px; }
+.error { color: #c00; }
+
+.main-grid { display: grid; grid-template-columns: 320px 1fr; grid-template-areas: "panel graph" "table table"; gap: 12px; }
+.panel  { grid-area: panel; border: 1px solid #eee; padding:12px; border-radius:8px; }
+.graph  { grid-area: graph; border: 1px solid #eee; padding:12px; border-radius:8px; min-height: 360px; }
+.table  { grid-area: table; border: 1px solid #eee; padding:12px; border-radius:8px; }
+
+.graph-placeholder { height: 320px; display:flex; align-items:center; justify-content:center; opacity:.6; }
+
+/* Tablet: 851..1173 */
+@media (max-width: 1173px) and (min-width: 851px) {
+    .main-grid { grid-template-columns: 1fr; grid-template-areas: "panel" "graph" "table"; }
+}
+
+/* Mobile: <851 */
+@media (max-width: 850px) {
+    .main-grid { grid-template-columns: 1fr; grid-template-areas: "panel" "graph" "table"; }
+}
