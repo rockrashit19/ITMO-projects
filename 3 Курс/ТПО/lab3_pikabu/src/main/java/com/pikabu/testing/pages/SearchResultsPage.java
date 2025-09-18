@@ -3,127 +3,163 @@ package com.pikabu.testing.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import java.util.List;
-import java.util.stream.Collectors;
 
-//public class SearchResultsPage extends BasePage {
-//
-//    private final By searchResults = By.xpath("//div[contains(@class, 'search-result') or contains(@class, 'story')]//a[contains(@class, 'title')]");
-//    private final By searchQuery = By.xpath("//input[contains(@class, 'search') or @name='q']");
-//    private final By noResultsMessage = By.xpath("//div[contains(text(), 'Ничего не найдено') or contains(text(), 'результатов')]");
-//    private final By searchFilters = By.xpath("//div[contains(@class, 'filter')]//a | //div[contains(@class, 'tab')]//a");
-//    private final By resultCount = By.xpath("//span[contains(text(), 'найдено') or contains(text(), 'результат')]");
-//    private final By loadMoreButton = By.xpath("//button[contains(text(), 'Показать ещё') or contains(@class, 'load-more')]");
-//
-//    public SearchResultsPage(WebDriver driver) {
-//        super(driver);
-//    }
-//
-//    public boolean isPageLoaded() {
-//        try {
-//            // Ждем либо результаты поиска, либо сообщение об их отсутствии
-//            wait.until(driver ->
-//                    !driver.findElements(searchResults).isEmpty() ||
-//                            !driver.findElements(noResultsMessage).isEmpty()
-//            );
-//            return true;
-//        } catch (Exception e) {
-//            return false;
-//        }
-//    }
-//
-//    public List<String> getSearchResultTitles() {
-//        List<WebElement> resultElements = driver.findElements(searchResults);
-//        return resultElements.stream()
-//                .map(WebElement::getText)
-//                .filter(text -> !text.isEmpty())
-//                .collect(Collectors.toList());
-//    }
-//
-//    public int getResultsCount() {
-//        return driver.findElements(searchResults).size();
-//    }
-//
-//    public boolean hasResults() {
-//        return !driver.findElements(searchResults).isEmpty();
-//    }
-//
-//    public boolean isNoResultsMessageVisible() {
-//        try {
-//            waitForElementVisible(noResultsMessage);
-//            return true;
-//        } catch (Exception e) {
-//            return false;
-//        }
-//    }
-//
-//    public String getSearchQuery() {
-//        try {
-//            WebElement searchField = waitForElementVisible(searchQuery);
-//            return searchField.getAttribute("value");
-//        } catch (Exception e) {
-//            return "";
-//        }
-//    }
-//
-//    public PostPage openFirstResult() {
-//        List<WebElement> results = driver.findElements(searchResults);
-//        if (!results.isEmpty()) {
-//            results.get(0).click();
-//            return new PostPage(driver);
-//        }
-//        throw new RuntimeException("No search results found");
-//    }
-//
-//    public boolean areFiltersVisible() {
-//        return !driver.findElements(searchFilters).isEmpty();
-//    }
-//
-//    public SearchResultsPage clickFilter(int filterIndex) {
-//        List<WebElement> filters = driver.findElements(searchFilters);
-//        if (filterIndex < filters.size()) {
-//            filters.get(filterIndex).click();
-//        }
-//        return this;
-//    }
-//
-//    public boolean isLoadMoreButtonVisible() {
-//        try {
-//            waitForElementVisible(loadMoreButton);
-//            return true;
-//        } catch (Exception e) {
-//            return false;
-//        }
-//    }
-//}
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SearchResultsPage extends BasePage {
-    _RESULTS_COUNT = (By.CSS_SELECTOR, "span[class^='results-stories__count']")
-    _FEED_CONTAINER = (By.CSS_SELECTOR, ".stories-feed__container")
-    _STORY_CARDS = (By.CSS_SELECTOR, "article.story")
-    _FIRST_STORY_LINK = (By.CSS_SELECTOR, "article.story h2.story__title a.story__title-link")
 
-            # немного XPath по тексту — без альтернатив особо никак
-    _SEARCH_BUTTON_X = (By.XPATH, "//button[.//span[normalize-space()='Поиск']]")
-    _TAB_BTN_X_TMPL = "//button[@data-tab='{key}']"           # stories | authors | tags | communities
-            _PERIOD_BTN_X_TMPL = ("//div[contains(@class,'fieldset-view__legend') and normalize-space()=' Период ']"
-                          "/following::div[contains(@class,'filter-tabs-view__host')][1]"
-                                  "/button[.//span[normalize-space()='{caption}']]")
-
-    private static final By SEARCH_INPUT   = By.xpath("//input[@type='search' and @placeholder='Искать на Пикабу']");
-    private static final By SEARCH_BUTTON  = By.xpath("//button[.//span[normalize-space()='Поиск']]");
-    private static final By RESULTS_COUNT  = By.xpath("//span[contains(@class,'results-stories__count')]");
-    private static final By FEED_CONTAINER = By.xpath("//div[contains(@class,'stories-feed__container')]");
-    private static final By STORY_CARDS    = By.xpath("//article[contains(@class,'story')]");
-    private static final By FIRST_STORY_LINK = By.xpath(
-            "(//article[contains(@class,'story')]//h2[contains(@class,'story__title')]//a[contains(@class,'story__title-link')])[1]"
+    private final By root = By.xpath(
+            "//main//*[contains(@class,'search') or contains(@class,'results') or contains(@class,'search-results')]" +
+                    " | //section[contains(@class,'search') or contains(@class,'results')]" +
+                    " | //main//article[contains(@class,'story') or contains(@class,'post')]" +
+                    " | //main"
     );
 
-    private static final String TAB_BTN_X_TMPL =
-            "//button[@data-tab='%s']"; // stories | authors | tags | communities
+    private final By searchInput = By.xpath(
+            "//input[" +
+                    "contains(@type,'search') or " +
+                    "contains(@name,'q') or contains(@name,'search') or " +
+                    "contains(translate(@placeholder,'ПОИСКSEARCH','поискsearch'),'поиск') or " +
+                    "contains(translate(@placeholder,'ПОИСКSEARCH','поискsearch'),'search')" +
+                    "]"
+    );
 
-    
-    public SearchResultsPage(WebDriver driver) {
-        super(driver);
+    private final By resultItems = By.xpath(
+            "//article[contains(@class,'story') or contains(@class,'post')]" +
+                    " | //div[contains(@class,'search-result') or contains(@class,'result-item')]"
+    );
+
+    private final By resultTitleLink = By.xpath(
+            ".//a[(contains(@class,'story__title-link') or contains(@class,'title')) and normalize-space()]" +
+                    " | .//h1//a | .//h2//a | .//a[normalize-space() and (ancestor::h1 or ancestor::h2)]"
+    );
+
+    private final By noResults = By.xpath(
+            "//*[contains(@class,'empty') or contains(@class,'not-found') or " +
+                    " contains(translate(normalize-space(.),'NO RESULTS','no results'),'no results') or " +
+                    " contains(translate(normalize-space(.),'НИЧЕГО','ничего'),'ничего')]"
+    );
+
+
+    public SearchResultsPage(WebDriver driver) { super(driver); }
+
+    public void waitLoaded() {
+        try {
+            wait.until(d -> {
+                String u = d.getCurrentUrl().toLowerCase();
+                return u.contains("search") || u.contains("?q=") || u.contains("&q=");
+            });
+        } catch (Exception ignored) {}
+
+        wait.withTimeout(java.time.Duration.ofSeconds(10)).until(d ->
+                !d.findElements(resultItems).isEmpty()
+                        || d.findElements(noResults).stream().anyMatch(org.openqa.selenium.WebElement::isDisplayed)
+                        || !d.findElements(By.xpath(
+                        "//a[normalize-space() and (" +
+                                " contains(@class,'story__title-link') or contains(@class,'title') or " +
+                                " contains(@href,'/story/') or contains(@href,'/link/')" +
+                                ")]"
+                )).isEmpty()
+        );
     }
+
+
+    public boolean isPageLoaded() {
+        try { waitLoaded(); return true; } catch (Exception e) { return false; }
+    }
+
+    public String getSearchQuery() {
+        List<WebElement> inputs = driver.findElements(searchInput);
+        if (!inputs.isEmpty()) {
+            String val = inputs.get(0).getAttribute("value");
+            if (val != null && !val.trim().isEmpty()) return val.trim();
+        }
+        try {
+            String url = driver.getCurrentUrl();
+            int i = url.indexOf('?'); if (i < 0) i = url.indexOf('&');
+            if (i >= 0) {
+                String qs = url.substring(i + 1);
+                for (String p : qs.split("&")) {
+                    String[] kv = p.split("=", 2);
+                    if (kv.length == 2 && (kv[0].equalsIgnoreCase("q") || kv[0].contains("search"))) {
+                        return URLDecoder.decode(kv[1], StandardCharsets.UTF_8);
+                    }
+                }
+            }
+        } catch (Exception ignored) {}
+        return "";
+    }
+
+    public boolean hasResults() {
+        try {
+            waitLoaded();
+        } catch (Exception ignored) { }
+        return !driver.findElements(resultItems).isEmpty();
+    }
+
+    public java.util.List<String> getSearchResultTitles() {
+        waitLoaded();
+
+        java.util.List<String> titles = new java.util.ArrayList<>();
+
+        for (org.openqa.selenium.WebElement item : driver.findElements(resultItems)) {
+            java.util.List<org.openqa.selenium.WebElement> links = item.findElements(resultTitleLink);
+            if (!links.isEmpty() && links.get(0).isDisplayed()) {
+                String t = links.get(0).getText().trim();
+                if (!t.isEmpty()) titles.add(t);
+            }
+        }
+
+        if (titles.isEmpty()) {
+            java.util.List<org.openqa.selenium.WebElement> links = driver.findElements(By.xpath(
+                    "//a[normalize-space() and (" +
+                            " contains(@class,'story__title-link') or contains(@class,'title') or " +
+                            " contains(@href,'/story/') or contains(@href,'/link/')" +
+                            ")] | //h1//a[normalize-space()] | //h2//a[normalize-space()]"
+            ));
+            for (org.openqa.selenium.WebElement a : links) {
+                if (a.isDisplayed()) {
+                    String t = a.getText().trim();
+                    if (!t.isEmpty()) titles.add(t);
+                }
+            }
+        }
+        return titles;
+    }
+
+
+    public PostPage openFirstResult() {
+        waitLoaded();
+
+        org.openqa.selenium.WebElement link = null;
+
+        for (org.openqa.selenium.WebElement item : driver.findElements(resultItems)) {
+            java.util.List<org.openqa.selenium.WebElement> links = item.findElements(resultTitleLink);
+            if (!links.isEmpty() && links.get(0).isDisplayed()) { link = links.get(0); break; }
+        }
+        if (link == null) {
+            java.util.List<org.openqa.selenium.WebElement> links = driver.findElements(By.xpath(
+                    "//a[normalize-space() and (" +
+                            " contains(@class,'story__title-link') or contains(@class,'title') or " +
+                            " contains(@href,'/story/') or contains(@href,'/link/')" +
+                            ")] | //h1//a[normalize-space()] | //h2//a[normalize-space()]"
+            ));
+            if (!links.isEmpty()) link = links.get(0);
+        }
+        if (link == null) return null;
+
+        scrollIntoView(link);
+        clickAndMaybeSwitch(link);
+
+        PostPage page = new PostPage(driver);
+        try {
+            wait.withTimeout(java.time.Duration.ofSeconds(8)).until(d -> page.isPageLoaded());
+        } catch (Exception ignored) {}
+        return page;
+    }
+
+
 }
