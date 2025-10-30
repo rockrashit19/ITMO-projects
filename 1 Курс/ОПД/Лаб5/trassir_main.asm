@@ -1,0 +1,72 @@
+ORG 0x292
+
+STR: WORD 0x5D3
+SR: WORD 0x5
+DR: WORD 0x4
+MASK: WORD 0x40
+M: WORD 0x00FF
+STOP: WORD 0x0
+LEN: WORD 0x0
+BUF: WORD 0x0
+CNT: WORD 0x0
+
+START:
+    CLA
+    LD STR
+    ST R1
+
+S1:
+    IN SR
+    AND MASK
+    BEQ S1
+    LD DR
+    AND M
+    ST (R1)+
+    ST LEN
+    CMP STOP
+    BEQ F
+
+LD LEN
+ST CNT
+CLA BUF
+ST BUF
+
+S2:
+    IN SR
+    AND MASK
+    BEQ S2
+    LD DR
+    AND M
+    ST BUF
+    LD CNT
+    DEC
+    ST CNT
+    CMP STOP
+    BEQ SAVE_LAST
+
+S3:
+    IN SR
+    AND MASK
+    BEQ S3
+    LD DR
+    AND M
+    SWAB
+    BIS BUF
+    ST (R1)+
+    LD CNT
+    DEC
+    ST CNT
+    CMP STOP
+    BEQ F
+    CLA
+    ST BUF
+    JUMP S2
+
+SAVE_LAST:
+    LD BUF
+    ST (R1)
+
+F:
+    HLT
+
+END
