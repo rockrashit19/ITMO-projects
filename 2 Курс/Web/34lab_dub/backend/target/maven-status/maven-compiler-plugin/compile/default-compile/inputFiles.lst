@@ -1,0 +1,9 @@
+/Users/admin/ITMO/2 Курс/Web/34lab_dub/backend/src/main/java/com/example/lab34/ejb/AuthService.java
+/Users/admin/ITMO/2 Курс/Web/34lab_dub/backend/src/main/java/com/example/lab34/ejb/PointService.java
+/Users/admin/ITMO/2 Курс/Web/34lab_dub/backend/src/main/java/com/example/lab34/entity/PointResult.java
+/Users/admin/ITMO/2 Курс/Web/34lab_dub/backend/src/main/java/com/example/lab34/entity/User.java
+/Users/admin/ITMO/2 Курс/Web/34lab_dub/backend/src/main/java/com/example/lab34/filter/CorsServletFilter.java
+/Users/admin/ITMO/2 Курс/Web/34lab_dub/backend/src/main/java/com/example/lab34/rest/AuthResource.java
+/Users/admin/ITMO/2 Курс/Web/34lab_dub/backend/src/main/java/com/example/lab34/rest/CorsFilterDisabled.java
+/Users/admin/ITMO/2 Курс/Web/34lab_dub/backend/src/main/java/com/example/lab34/rest/PointResource.java
+/Users/admin/ITMO/2 Курс/Web/34lab_dub/backend/src/main/java/com/example/lab34/rest/RestApplication.java

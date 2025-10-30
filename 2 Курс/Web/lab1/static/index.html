@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1lab Galiullin</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+<header>
+  <h1>WEB1 - Point in Area Checker</h1>
+  <p>Student: Rashit Galiullin, Group: P3334, Variant: 490149</p>
+</header>
+<main>
+  <div class="container">
+    <form action="/static" method="get" id="pointForm">
+      <div className="image">
+        <img src="img/areas-2.png" alt="Areas to check"/>
+      </div>
+      <div class="input-group">
+        <label for="x">X:</label>
+        <input type="number" id="x" name="x" placeholder="Enter X" required>
+      </div>
+      <div class="input-group">
+        <label>Y:</label>
+        <div class="radio-group">
+          <label><input type="radio" name="y" value="-3"> -3</label>
+          <label><input type="radio" name="y" value="-2"> -2</label>
+          <label><input type="radio" name="y" value="-1"> -1</label>
+          <label><input type="radio" name="y" value="0"> 0</label>
+          <label><input type="radio" name="y" value="1"> 1</label>
+          <label><input type="radio" name="y" value="2"> 2</label>
+          <label><input type="radio" name="y" value="3"> 3</label>
+          <label><input type="radio" name="y" value="4"> 4</label>
+          <label><input type="radio" name="y" value="5"> 5</label>
+        </div>
+      </div>
+      <div class="input-group">
+        <label>R:</label>
+        <div class="button-group">
+          <button type="button" class="r-button" data-r="1">1</button>
+          <button type="button" class="r-button" data-r="2">2</button>
+          <button type="button" class="r-button" data-r="3">3</button>
+          <button type="button" class="r-button" data-r="4">4</button>
+          <button type="button" class="r-button" data-r="5">5</button>
+        </div>
+      </div>
+      <button type="button" id="submit">Submit</button>
+    </form>
+    <div id="error" hidden>
+    </div>
+    <div id="result">
+      <h2>Results</h2>
+      <div class="table-container">
+        <table id="resultTable">
+          <thead>
+          <tr>
+            <th>X</th>
+            <th>Y</th>
+            <th>R</th>
+            <th>Time</th>
+            <th>Execution Time</th>
+            <th>In Area</th>
+          </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>

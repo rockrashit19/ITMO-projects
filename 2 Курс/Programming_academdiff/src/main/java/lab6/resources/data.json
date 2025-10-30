@@ -1,0 +1,127 @@
+[
+  {
+    "id": 1,
+    "name": "Lab Work 1",
+    "coordinates": {
+      "x": 10.5,
+      "y": 100
+    },
+    "creationDate": "2025-05-21T14:33:41.646746+03:00[Europe/Moscow]",
+    "minimalPoint": 50,
+    "difficulty": "VERY_EASY",
+    "author": {
+      "name": "John Doe",
+      "birthday": "1990-05-15T08:00:00Z",
+      "passportID": "ABC123XYZ",
+      "eyeColor": "BROWN",
+      "hairColor": "BROWN"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Lab Work 2",
+    "coordinates": {
+      "x": 20.0,
+      "y": 200
+    },
+    "creationDate": "2025-05-21T14:35:00.154683+03:00[Europe/Moscow]",
+    "minimalPoint": 75,
+    "difficulty": "NORMAL",
+    "author": {
+      "name": "Jane Smith",
+      "birthday": "1992-10-20T10:00:00Z",
+      "passportID": "DEF456UVW",
+      "eyeColor": "GREEN"
+    }
+  },
+  {
+    "id": 4,
+    "name": "g",
+    "coordinates": {
+      "x": 4.0,
+      "y": 2
+    },
+    "creationDate": "2025-05-21T14:36:00.499727+03:00[Europe/Moscow]",
+    "minimalPoint": 5,
+    "difficulty": "EASY",
+    "author": {
+      "name": "test2",
+      "birthday": "2023-10-27T10:00:00Z",
+      "passportID": "h594",
+      "eyeColor": "BLACK",
+      "hairColor": "GREEN"
+    }
+  },
+  {
+    "id": 5,
+    "name": "testUpdated",
+    "coordinates": {
+      "x": 5.0,
+      "y": 4
+    },
+    "creationDate": "2025-05-21T14:56:53.74647+03:00[Europe/Moscow]",
+    "minimalPoint": 3,
+    "difficulty": "NORMAL",
+    "author": {
+      "name": "hard",
+      "birthday": "2023-10-27T10:00:00Z",
+      "passportID": "g543",
+      "eyeColor": "BLACK",
+      "hairColor": "GREEN"
+    }
+  },
+  {
+    "id": 6,
+    "name": "a",
+    "coordinates": {
+      "x": 4.0,
+      "y": 2
+    },
+    "creationDate": "2025-05-21T14:58:06.846649+03:00[Europe/Moscow]",
+    "minimalPoint": 4,
+    "difficulty": "EASY",
+    "author": {
+      "name": "test",
+      "birthday": "2023-10-27T10:00:00Z",
+      "passportID": "gh43",
+      "eyeColor": "GREEN",
+      "hairColor": "BLACK"
+    }
+  },
+  {
+    "id": 7,
+    "name": "0",
+    "coordinates": {
+      "x": 1.0,
+      "y": 2
+    },
+    "creationDate": "2025-05-21T14:58:40.041486+03:00[Europe/Moscow]",
+    "minimalPoint": 3,
+    "difficulty": "INSANE",
+    "author": {
+      "name": "nameTestFromScript",
+      "birthday": "2002-02-03T10:00:00Z",
+      "passportID": "4",
+      "eyeColor": "WHITE",
+      "hairColor": "BROWN"
+    }
+  },
+  {
+    "id": 8,
+    "name": "testUpdatedFromScript",
+    "coordinates": {
+      "x": 1.0,
+      "y": 2
+    },
+    "creationDate": "2025-05-21T15:00:07.534213+03:00[Europe/Moscow]",
+    "minimalPoint": 3,
+    "difficulty": "INSANE",
+    "author": {
+      "name": "nameTestFromScript",
+      "birthday": "2002-02-03T10:00:00Z",
+      "passportID": "4",
+      "eyeColor": "WHITE",
+      "hairColor": "BROWN"
+    }
+  }
+]

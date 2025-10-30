@@ -1,0 +1,11 @@
+org/example/lab/dto/LoginRequest.class
+org/example/lab/dto/HitRequest.class
+org/example/lab/RestApplication.class
+org/example/lab/dto/HitResponse.class
+org/example/lab/rest/CorsFilter.class
+org/example/lab/rest/AuthResource.class
+org/example/lab/entity/HitResult.class
+org/example/lab/rest/HitResource.class
+org/example/lab/service/HitService.class
+org/example/lab/service/AuthService.class
+org/example/lab/entity/User.class

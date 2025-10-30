@@ -1,0 +1,11 @@
+/Users/admin/ITMO/2 Курс/Web/lab34/src/backend/src/main/java/org/example/lab/RestApplication.java
+/Users/admin/ITMO/2 Курс/Web/lab34/src/backend/src/main/java/org/example/lab/dto/HitRequest.java
+/Users/admin/ITMO/2 Курс/Web/lab34/src/backend/src/main/java/org/example/lab/dto/HitResponse.java
+/Users/admin/ITMO/2 Курс/Web/lab34/src/backend/src/main/java/org/example/lab/dto/LoginRequest.java
+/Users/admin/ITMO/2 Курс/Web/lab34/src/backend/src/main/java/org/example/lab/entity/HitResult.java
+/Users/admin/ITMO/2 Курс/Web/lab34/src/backend/src/main/java/org/example/lab/entity/User.java
+/Users/admin/ITMO/2 Курс/Web/lab34/src/backend/src/main/java/org/example/lab/rest/AuthResource.java
+/Users/admin/ITMO/2 Курс/Web/lab34/src/backend/src/main/java/org/example/lab/rest/CorsFilter.java
+/Users/admin/ITMO/2 Курс/Web/lab34/src/backend/src/main/java/org/example/lab/rest/HitResource.java
+/Users/admin/ITMO/2 Курс/Web/lab34/src/backend/src/main/java/org/example/lab/service/AuthService.java
+/Users/admin/ITMO/2 Курс/Web/lab34/src/backend/src/main/java/org/example/lab/service/HitService.java
