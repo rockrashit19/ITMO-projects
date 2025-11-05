@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="PikabuFunctionalTests" parallel="tests" thread-count="2">
+
+<!--    <test name="ChromeTests">-->
+<!--        <parameter name="browser" value="chrome"/>-->
+<!--        <classes>-->
+<!--            <class name="com.pikabu.testing.functional.MainPageTest"/>-->
+<!--            <class name="com.pikabu.testing.functional.SearchFunctionalityTest"/>-->
+<!--            <class name="com.pikabu.testing.functional.LoginFunctionalityTest"/>-->
+<!--            <class name="com.pikabu.testing.functional.PostViewingTest"/>-->
+<!--            <class name="com.pikabu.testing.functional.PikabuPagesTest"/>-->
+<!--            <class name="com.pikabu.testing.functional.AuthAndCommunitiesTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="FirefoxTests">-->
+<!--        <parameter name="browser" value="firefox"/>-->
+<!--        <classes>-->
+<!--            <class name="com.pikabu.testing.functional.MainPageTest"/>-->
+<!--            <class name="com.pikabu.testing.functional.SearchFunctionalityTest"/>-->
+<!--            <class name="com.pikabu.testing.functional.LoginFunctionalityTest"/>-->
+<!--            <class name="com.pikabu.testing.functional.PostViewingTest"/>-->
+<!--            <class name="com.pikabu.testing.functional.PikabuPagesTest"/>-->
+<!--            <class name="com.pikabu.testing.functional.AuthAndCommunitiesTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+    <test name="DomainModelTests">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.pikabu.testing.domain.UserTest"/>
+            <class name="com.pikabu.testing.domain.PostTest"/>
+            <class name="com.pikabu.testing.domain.SearchQueryTest"/>
+        </classes>
+    </test>
+
+</suite>

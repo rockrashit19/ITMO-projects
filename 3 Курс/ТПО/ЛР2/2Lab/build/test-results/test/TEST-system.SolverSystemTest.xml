@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="system.SolverSystemTest" tests="21" skipped="0" failures="0" errors="0" timestamp="2025-06-13T14:32:25" hostname="MacBook-Pro-RushB.local" time="0.058">
+  <properties/>
+  <testcase name="Special dots" classname="system.SolverSystemTest" time="0.022"/>
+  <testcase name="Special dots" classname="system.SolverSystemTest" time="0.001"/>
+  <testcase name="Special dots" classname="system.SolverSystemTest" time="0.001"/>
+  <testcase name="Special dots" classname="system.SolverSystemTest" time="0.001"/>
+  <testcase name="Special dots" classname="system.SolverSystemTest" time="0.001"/>
+  <testcase name="Special dots" classname="system.SolverSystemTest" time="0.001"/>
+  <testcase name="Special dots" classname="system.SolverSystemTest" time="0.001"/>
+  <testcase name="Special dots" classname="system.SolverSystemTest" time="0.0"/>
+  <testcase name="Special dots" classname="system.SolverSystemTest" time="0.001"/>
+  <testcase name="Special dots" classname="system.SolverSystemTest" time="0.002"/>
+  <testcase name="Special dots" classname="system.SolverSystemTest" time="0.0"/>
+  <testcase name="Special dots" classname="system.SolverSystemTest" time="0.001"/>
+  <testcase name="Special dots" classname="system.SolverSystemTest" time="0.001"/>
+  <testcase name="Special dots" classname="system.SolverSystemTest" time="0.001"/>
+  <testcase name="Special dots" classname="system.SolverSystemTest" time="0.001"/>
+  <testcase name="Special dots" classname="system.SolverSystemTest" time="0.001"/>
+  <testcase name="Special dots" classname="system.SolverSystemTest" time="0.0"/>
+  <testcase name="Special dots" classname="system.SolverSystemTest" time="0.001"/>
+  <testcase name="Special dots" classname="system.SolverSystemTest" time="0.0"/>
+  <testcase name="Special dots" classname="system.SolverSystemTest" time="0.0"/>
+  <testcase name="Special dots" classname="system.SolverSystemTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
