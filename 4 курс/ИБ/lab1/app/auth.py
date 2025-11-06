@@ -37,9 +37,7 @@ def login():
 
     user = User.query.filter_by(username=username).first()
     if not user or not bcrypt.verify(password, user.password_hash):
-        # Avoid detailed messages (don't reveal which of username/password is wrong)
         return jsonify({"msg": "bad credentials"}), 401
 
-    # create JWT (access token)
     access_token = create_access_token(identity=str(user.id))
     return jsonify({"access_token": access_token, "user": {"username": escape(user.username), "email": escape(user.email) if user.email else None}}), 200

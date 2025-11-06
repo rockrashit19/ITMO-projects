@@ -8,11 +8,9 @@ api_bp = Blueprint("api", __name__, url_prefix="/api")
 @api_bp.route("/data", methods=["GET"])
 @jwt_required()
 def get_data():
-    # Only authenticated users reach here.
     user_id = int(get_jwt_identity())
     user = User.query.get(user_id)
 
-    # Example data — could be posts/users etc.
     sample = [
         {"id": 1, "title": "Public post 1", "content": escape("Hello <script>alert(1)</script> from user data")},
         {"id": 2, "title": "Public post 2", "content": escape("This content is safe to render in client")}
